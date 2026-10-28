@@ -1,79 +1,117 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430" role="img" aria-labelledby="title desc">
-  <title id="title">TimaBak — Building Systems, AI &amp; Internet Products</title>
-  <desc id="desc">Animated terminal-inspired profile header for TimaBak.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500" role="img" aria-labelledby="title desc">
+  <title id="title">TimaBak — Digital systems builder</title>
+  <desc id="desc">Animated Matrix terminal header for TimaBak, founder of Bakunity.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#050806"/>
-      <stop offset="52%" stop-color="#0a0f0c"/>
-      <stop offset="100%" stop-color="#030504"/>
+      <stop offset="0%" stop-color="#020604"/>
+      <stop offset="48%" stop-color="#07100a"/>
+      <stop offset="100%" stop-color="#010302"/>
     </linearGradient>
-    <linearGradient id="greenLine" x1="0" x2="1">
-      <stop offset="0%" stop-color="#1aff6b" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#2cff88" stop-opacity=".9"/>
-      <stop offset="100%" stop-color="#1aff6b" stop-opacity="0"/>
+    <radialGradient id="radar">
+      <stop offset="0%" stop-color="#2cff88" stop-opacity=".16"/>
+      <stop offset="60%" stop-color="#2cff88" stop-opacity=".04"/>
+      <stop offset="100%" stop-color="#2cff88" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="scan" x1="0" x2="1">
+      <stop offset="0%" stop-color="#2cff88" stop-opacity="0"/>
+      <stop offset="45%" stop-color="#2cff88" stop-opacity=".85"/>
+      <stop offset="55%" stop-color="#c9ffda"/>
+      <stop offset="100%" stop-color="#2cff88" stop-opacity="0"/>
     </linearGradient>
     <filter id="glow">
-      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feGaussianBlur stdDeviation="3.8" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1b3b27" stroke-width="1" opacity=".16"/>
+    <filter id="soft">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#1e5132" stroke-width="1" opacity=".13"/>
     </pattern>
+    <clipPath id="matrixClip"><rect x="720" y="42" width="430" height="416" rx="18"/></clipPath>
     <style>
-      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
-      .scan { animation: scan 7s linear infinite; }
-      .pulse { animation: pulse 2.2s ease-in-out infinite; }
-      .blink { animation: blink 1s steps(1,end) infinite; }
-      .float1 { animation: float1 6s ease-in-out infinite; }
-      .float2 { animation: float2 8s ease-in-out infinite; }
-      .line1 { opacity: 0; animation: reveal 8s infinite 0s; }
-      .line2 { opacity: 0; animation: reveal 8s infinite 1s; }
-      .line3 { opacity: 0; animation: reveal 8s infinite 2s; }
-      @keyframes scan { 0% { transform: translateY(-20px); opacity: 0 } 10% { opacity:.8 } 90% { opacity:.35 } 100% { transform: translateY(450px); opacity:0 } }
-      @keyframes pulse { 0%,100% { opacity:.55 } 50% { opacity:1 } }
-      @keyframes blink { 0%,49% { opacity:1 } 50%,100% { opacity:0 } }
-      @keyframes float1 { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-5px) } }
-      @keyframes float2 { 0%,100% { transform: translateY(0) } 50% { transform: translateY(7px) } }
-      @keyframes reveal { 0%,6% { opacity:0 } 10%,75% { opacity:.92 } 90%,100% { opacity:0 } }
+      .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}
+      .scanline{animation:scanline 6.5s linear infinite}
+      .pulse{animation:pulse 2.2s ease-in-out infinite}
+      .blink{animation:blink 1s steps(1,end) infinite}
+      .glitch1{animation:glitch1 7s steps(1,end) infinite}
+      .glitch2{animation:glitch2 7s steps(1,end) infinite}
+      .m1{animation:rain 7.4s linear infinite}
+      .m2{animation:rain 9.6s linear infinite -2s}
+      .m3{animation:rain 6.6s linear infinite -4s}
+      .m4{animation:rain 10.5s linear infinite -1s}
+      .m5{animation:rain 8.2s linear infinite -5s}
+      .log1{animation:log 9s infinite 0s}
+      .log2{animation:log 9s infinite 1.2s}
+      .log3{animation:log 9s infinite 2.4s}
+      .phrase1{animation:phrase 9s infinite 0s}
+      .phrase2{animation:phrase 9s infinite 3s;opacity:0}
+      .phrase3{animation:phrase 9s infinite 6s;opacity:0}
+      .dash{stroke-dasharray:8 10;animation:dash 12s linear infinite}
+      @keyframes scanline{0%{transform:translateY(-18px);opacity:0}8%{opacity:.85}92%{opacity:.25}100%{transform:translateY(510px);opacity:0}}
+      @keyframes pulse{0%,100%{opacity:.45;transform:scale(.96)}50%{opacity:1;transform:scale(1.08)}}
+      @keyframes blink{0%,48%{opacity:1}49%,100%{opacity:0}}
+      @keyframes rain{0%{transform:translateY(-340px);opacity:0}10%{opacity:.7}90%{opacity:.45}100%{transform:translateY(520px);opacity:0}}
+      @keyframes log{0%,7%{opacity:0;transform:translateX(-8px)}12%,77%{opacity:.82;transform:translateX(0)}88%,100%{opacity:0}}
+      @keyframes phrase{0%,5%{opacity:0}10%,28%{opacity:1}33%,100%{opacity:0}}
+      @keyframes dash{to{stroke-dashoffset:-180}}
+      @keyframes glitch1{0%,91%,100%{transform:translate(0);opacity:0}92%{transform:translate(4px,-1px);opacity:.55}93%{transform:translate(-3px,1px);opacity:.3}94%{opacity:0}}
+      @keyframes glitch2{0%,94%,100%{transform:translate(0);opacity:0}95%{transform:translate(-5px,1px);opacity:.45}96%{transform:translate(3px,-1px);opacity:.25}97%{opacity:0}}
     </style>
   </defs>
 
-  <rect width="1200" height="430" rx="24" fill="url(#bg)"/>
-  <rect width="1200" height="430" rx="24" fill="url(#grid)"/>
-  <rect x="1" y="1" width="1198" height="428" rx="23" fill="none" stroke="#1d5c36" stroke-opacity=".7"/>
-  <rect x="24" y="24" width="1152" height="382" rx="18" fill="#07100a" fill-opacity=".54" stroke="#173522"/>
+  <rect width="1200" height="500" rx="26" fill="url(#bg)"/>
+  <ellipse cx="940" cy="250" rx="340" ry="260" fill="url(#radar)" filter="url(#soft)"/>
+  <rect width="1200" height="500" rx="26" fill="url(#grid)"/>
+  <rect x="1.5" y="1.5" width="1197" height="497" rx="24.5" fill="none" stroke="#28613d" stroke-opacity=".75"/>
+  <path d="M34 92H1166M700 42V458" stroke="#173a25" opacity=".8"/>
 
-  <g class="float1" opacity=".19" fill="#2cff88" class="mono">
-    <text x="805" y="86" font-size="13">&gt; deploy --production</text>
-    <text x="895" y="118" font-size="13">system.online = true</text>
-    <text x="770" y="152" font-size="13">ai.agents.start()</text>
-    <text x="920" y="186" font-size="13">network.route()</text>
+  <circle cx="64" cy="54" r="6" fill="#ff5f57"/>
+  <circle cx="86" cy="54" r="6" fill="#febc2e"/>
+  <circle cx="108" cy="54" r="6" fill="#28c840"/>
+  <text x="138" y="59" class="mono" font-size="14" fill="#688775">root@bakunity://tima.profile</text>
+  <text x="930" y="59" class="mono" font-size="13" fill="#2cff88">[ MATRIX://ACTIVE ]</text>
+
+  <g clip-path="url(#matrixClip)" class="mono" fill="#2cff88" font-size="13">
+    <g class="m1" opacity=".28"><text x="755" y="0">0<tspan x="755" dy="20">1</tspan><tspan x="755" dy="20">B</tspan><tspan x="755" dy="20">A</tspan><tspan x="755" dy="20">K</tspan><tspan x="755" dy="20">1</tspan><tspan x="755" dy="20">0</tspan><tspan x="755" dy="20">AI</tspan><tspan x="755" dy="20">01</tspan><tspan x="755" dy="20">SYS</tspan><tspan x="755" dy="20">11</tspan><tspan x="755" dy="20">NET</tspan></text></g>
+    <g class="m2" opacity=".18"><text x="820" y="-80">1<tspan x="820" dy="20">0</tspan><tspan x="820" dy="20">01</tspan><tspan x="820" dy="20">AI</tspan><tspan x="820" dy="20">11</tspan><tspan x="820" dy="20">BOT</tspan><tspan x="820" dy="20">SYS</tspan><tspan x="820" dy="20">0</tspan><tspan x="820" dy="20">1</tspan></text></g>
+    <g class="m3" opacity=".36"><text x="895" y="-160">B<tspan x="895" dy="20">A</tspan><tspan x="895" dy="20">K</tspan><tspan x="895" dy="20">U</tspan><tspan x="895" dy="20">N</tspan><tspan x="895" dy="20">I</tspan><tspan x="895" dy="20">T</tspan><tspan x="895" dy="20">Y</tspan><tspan x="895" dy="20">01</tspan><tspan x="895" dy="20">AI</tspan></text></g>
+    <g class="m4" opacity=".2"><text x="980" y="-40">11<tspan x="980" dy="20">VPN</tspan><tspan x="980" dy="20">01</tspan><tspan x="980" dy="20">NET</tspan><tspan x="980" dy="20">AI</tspan><tspan x="980" dy="20">00</tspan><tspan x="980" dy="20">OPS</tspan><tspan x="980" dy="20">10</tspan></text></g>
+    <g class="m5" opacity=".27"><text x="1070" y="-120">AI<tspan x="1070" dy="20">01</tspan><tspan x="1070" dy="20">OS</tspan><tspan x="1070" dy="20">VED</tspan><tspan x="1070" dy="20">10</tspan><tspan x="1070" dy="20">SYS</tspan><tspan x="1070" dy="20">1</tspan><tspan x="1070" dy="20">0</tspan></text></g>
   </g>
-  <g class="float2" opacity=".12" fill="#9df8bd" class="mono">
-    <text x="835" y="285" font-size="12">docker compose up -d</text>
-    <text x="930" y="318" font-size="12">git push origin main</text>
-    <text x="760" y="350" font-size="12">build → ship → iterate</text>
+
+  <circle cx="937" cy="250" r="124" fill="none" stroke="#2cff88" stroke-opacity=".08"/>
+  <circle cx="937" cy="250" r="82" fill="none" stroke="#2cff88" stroke-opacity=".12" class="dash"/>
+  <circle cx="937" cy="250" r="4.5" fill="#2cff88" class="pulse" filter="url(#glow)"/>
+  <path d="M937 250L1080 165M937 250L1045 354M937 250L817 327M937 250L852 166" stroke="#2cff88" stroke-opacity=".18" stroke-width="1.5" class="dash"/>
+  <g class="mono" font-size="12" fill="#8db59a">
+    <text x="1084" y="165">INFRA</text><text x="1048" y="370">VPN</text><text x="770" y="345">OSVED</text><text x="792" y="160">AI</text>
   </g>
 
-  <rect class="scan" x="24" y="-8" width="1152" height="3" fill="url(#greenLine)" filter="url(#glow)"/>
+  <text x="58" y="130" class="mono" font-size="15" fill="#65d98b">$ ./boot-profile --mode=build</text>
+  <text x="58" y="205" class="mono" font-size="60" font-weight="800" letter-spacing="9" fill="#f2fff5">TIMA BAK</text>
+  <text x="61" y="205" class="mono glitch1" font-size="60" font-weight="800" letter-spacing="9" fill="#2cff88">TIMA BAK</text>
+  <text x="55" y="205" class="mono glitch2" font-size="60" font-weight="800" letter-spacing="9" fill="#b7ffd0">TIMA BAK</text>
+  <text x="58" y="244" class="mono" font-size="17" fill="#799886">FOUNDER / BUILDER / SYSTEMS THINKER</text>
 
-  <circle cx="66" cy="62" r="6" fill="#ff5f57"/>
-  <circle cx="88" cy="62" r="6" fill="#febc2e"/>
-  <circle cx="110" cy="62" r="6" fill="#28c840"/>
-  <text x="142" y="67" class="mono" font-size="15" fill="#6f8878">tima@bakunity:~/profile</text>
-
-  <text x="68" y="128" class="mono" font-size="16" fill="#65d98b">$ whoami</text>
-  <text x="68" y="192" class="mono" font-size="54" font-weight="700" letter-spacing="8" fill="#f3fff6">TIMA BAK</text>
-  <text x="68" y="234" class="mono" font-size="22" font-weight="600" fill="#2cff88" filter="url(#glow)">BUILDING SYSTEMS, AI &amp; INTERNET PRODUCTS</text>
-
-  <text x="68" y="286" class="mono line1" font-size="18" fill="#c7d8cc">&gt; Founder @ Bakunity</text>
-  <text x="68" y="318" class="mono line2" font-size="18" fill="#c7d8cc">&gt; AI · Automation · Infrastructure · Products</text>
-  <text x="68" y="350" class="mono line3" font-size="18" fill="#c7d8cc">&gt; OSVED · Bak VPN · Open Source</text>
-
-  <g transform="translate(68 378)">
-    <circle class="pulse" cx="7" cy="7" r="7" fill="#2cff88" filter="url(#glow)"/>
-    <text x="24" y="13" class="mono" font-size="16" font-weight="700" fill="#2cff88">ONLINE</text>
-    <text x="112" y="13" class="mono" font-size="16" fill="#6f8878">// BUILD MODE</text>
-    <rect class="blink" x="286" y="-2" width="10" height="18" fill="#2cff88"/>
+  <g class="mono" font-size="21" font-weight="700" fill="#2cff88" filter="url(#glow)">
+    <text x="58" y="292" class="phrase1">BUILDING AI × INFRASTRUCTURE × PRODUCTS</text>
+    <text x="58" y="292" class="phrase2">AUTOMATING BORING WORK INTO SYSTEMS</text>
+    <text x="58" y="292" class="phrase3">SHIPPING USEFUL THINGS ON THE INTERNET</text>
   </g>
+
+  <g class="mono" font-size="15" fill="#b4c9ba">
+    <text x="58" y="342" class="log1">&gt; bakunity.ecosystem ........ CONNECTED</text>
+    <text x="58" y="372" class="log2">&gt; osved.intelligence ........ BUILDING</text>
+    <text x="58" y="402" class="log3">&gt; bakvpn.network ............. LIVE</text>
+  </g>
+
+  <g transform="translate(58 446)">
+    <circle cx="7" cy="7" r="6.5" fill="#2cff88" class="pulse" filter="url(#glow)"/>
+    <text x="24" y="12" class="mono" font-size="14" font-weight="700" fill="#2cff88">SYSTEM ONLINE</text>
+    <text x="158" y="12" class="mono" font-size="14" fill="#567263">// BUILD → SHIP → ITERATE</text>
+    <rect x="394" y="-2" width="9" height="17" fill="#2cff88" class="blink"/>
+  </g>
+
+  <rect class="scanline" x="28" y="-12" width="1144" height="2.5" fill="url(#scan)" filter="url(#glow)"/>
 </svg>
