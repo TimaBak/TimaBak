@@ -15,12 +15,12 @@
 </p>
 
 <p align="center">
-  <strong>Founder / Builder / Systems Thinker</strong><br/>
-  I turn ideas into working systems — AI, infrastructure, automation, networks and internet products.
+  <strong>DIGITAL SYSTEMS BUILDER</strong><br/>
+  I build digital products end to end — from idea and interface to AI, backend, networks and infrastructure.
 </p>
 
 <p align="center">
-  <code>AI</code> × <code>INFRASTRUCTURE</code> × <code>AUTOMATION</code> × <code>CYBERSECURITY</code> × <code>PRODUCTS</code>
+  <code>AI</code> × <code>PRODUCTS</code> × <code>INFRASTRUCTURE</code>
 </p>
 
 <img src="./assets/system-status.svg" width="100%" alt="Current system status" />
@@ -41,23 +41,14 @@
   <a href="https://github.com/TimaBak/System-Architect"><img src="./assets/card-infra.svg" width="49%" alt="Systems Lab" /></a>
 </p>
 
-## `> cat mission.txt`
+## `> build.loop`
 
 ```text
-Find a real problem.
-        ↓
-Build the smallest working system.
-        ↓
-Connect AI + software + infrastructure.
-        ↓
-Ship it.
-        ↓
-Watch what actually happens.
-        ↓
-Improve the system.
+idea → build → ship → operate → scale
 ```
 
-I like products that do something useful instead of existing only as demos.
+I like products as complete systems: interface, logic, AI, backend, infrastructure,
+networks and real operation should work together.
 
 ## `> cat stack.txt`
 
