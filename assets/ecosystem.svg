@@ -1,26 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="390" viewBox="0 0 1200 390" role="img" aria-labelledby="title">
-<title id="title">Bakunity ecosystem map</title>
-<defs>
- <linearGradient id="bg" x1="0" x2="1"><stop stop-color="#030604"/><stop offset=".5" stop-color="#09110b"/><stop offset="1" stop-color="#030604"/></linearGradient>
- <filter id="gl"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
- <style>
- .m{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace}.p{animation:p 2.5s ease-in-out infinite}.d{stroke-dasharray:7 9;animation:d 13s linear infinite}.f1{animation:f 5s ease-in-out infinite}.f2{animation:f 6.5s ease-in-out infinite reverse}
- @keyframes p{0%,100%{opacity:.45}50%{opacity:1}}@keyframes d{to{stroke-dashoffset:-190}}@keyframes f{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
- </style>
-</defs>
-<rect width="1200" height="390" rx="22" fill="url(#bg)"/><rect x="1" y="1" width="1198" height="388" rx="21" fill="none" stroke="#1a472b"/>
-<text x="42" y="46" class="m" font-size="14" fill="#617f6b">$ map ./bakunity --depth=all</text>
-<text x="42" y="80" class="m" font-size="24" font-weight="700" fill="#effff3">BAKUNITY ECOSYSTEM</text>
-<text x="42" y="107" class="m" font-size="13" fill="#688875">ONE CORE · MULTIPLE SYSTEMS · REAL PRODUCTS</text>
-<g stroke="#2cff88" stroke-opacity=".3" stroke-width="1.5" class="d">
- <path d="M600 211L312 157"/><path d="M600 211L898 151"/><path d="M600 211L274 290"/><path d="M600 211L916 286"/><path d="M600 211L600 330"/>
-</g>
-<g class="m">
- <g transform="translate(480 155)" class="f1"><rect width="240" height="112" rx="18" fill="#09160e" stroke="#2cff88" stroke-opacity=".6"/><circle cx="24" cy="24" r="6" fill="#2cff88" class="p" filter="url(#gl)"/><text x="42" y="30" font-size="13" fill="#2cff88">CORE</text><text x="120" y="66" text-anchor="middle" font-size="27" font-weight="800" fill="#f1fff5">BAKUNITY</text><text x="120" y="91" text-anchor="middle" font-size="12" fill="#668672">BUILDING SYSTEMS THAT WORK</text></g>
- <g transform="translate(90 112)" class="f2"><rect width="250" height="82" rx="14" fill="#07100a" stroke="#194c2b"/><text x="20" y="30" font-size="18" font-weight="700" fill="#f0fff4">OSVED</text><text x="20" y="54" font-size="12" fill="#2cff88">PERSONAL INTELLIGENCE</text><text x="20" y="70" font-size="11" fill="#64826e">signal → context → knowledge</text></g>
- <g transform="translate(860 106)" class="f1"><rect width="250" height="82" rx="14" fill="#07100a" stroke="#194c2b"/><text x="20" y="30" font-size="18" font-weight="700" fill="#f0fff4">BAK VPN</text><text x="20" y="54" font-size="12" fill="#2cff88">PRIVATE NETWORK</text><text x="20" y="70" font-size="11" fill="#64826e">routing · privacy · infrastructure</text></g>
- <g transform="translate(66 254)" class="f1"><rect width="270" height="82" rx="14" fill="#07100a" stroke="#194c2b"/><text x="20" y="30" font-size="18" font-weight="700" fill="#f0fff4">AI AUTOMATION</text><text x="20" y="54" font-size="12" fill="#2cff88">AGENTS + WORKFLOWS</text><text x="20" y="70" font-size="11" fill="#64826e">remove routine · increase leverage</text></g>
- <g transform="translate(854 250)" class="f2"><rect width="280" height="82" rx="14" fill="#07100a" stroke="#194c2b"/><text x="20" y="30" font-size="18" font-weight="700" fill="#f0fff4">BACKUNITY ACCESS</text><text x="20" y="54" font-size="12" fill="#2cff88">REMOTE SYSTEMS</text><text x="20" y="70" font-size="11" fill="#64826e">access · device trust · control</text></g>
- <g transform="translate(472 305)"><rect width="256" height="58" rx="14" fill="#07100a" stroke="#194c2b"/><text x="128" y="25" text-anchor="middle" font-size="14" font-weight="700" fill="#f0fff4">INFRASTRUCTURE</text><text x="128" y="43" text-anchor="middle" font-size="11" fill="#2cff88">LINUX · DOCKER · NETWORKING</text></g>
-</g>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="410" viewBox="0 0 1200 410" role="img" aria-labelledby="title">
+<title id="title">Bakunity ecosystem</title>
+<defs><linearGradient id="bg" x1="0" x2="1"><stop stop-color="#030604"/><stop offset=".5" stop-color="#09110b"/><stop offset="1" stop-color="#030604"/></linearGradient><filter id="gl"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter><style>.m{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace}.p{animation:p 2.5s ease-in-out infinite}.d{stroke-dasharray:7 9;animation:d 13s linear infinite}@keyframes p{0%,100%{opacity:.42}50%{opacity:1}}@keyframes d{to{stroke-dashoffset:-190}}</style></defs>
+<rect width="1200" height="410" rx="22" fill="url(#bg)"/><rect x="1" y="1" width="1198" height="408" rx="21" fill="none" stroke="#1a472b"/>
+<text x="42" y="46" class="m" font-size="14" fill="#617f6b">$ map ./bakunity --depth=all</text><text x="42" y="80" class="m" font-size="24" font-weight="700" fill="#effff3">BAKUNITY ECOSYSTEM</text><text x="42" y="107" class="m" font-size="13" fill="#688875">ONE CORE · MULTIPLE SYSTEMS · REAL PRODUCTS</text>
+<g stroke="#2cff88" stroke-opacity=".3" stroke-width="1.5" class="d"><path d="M600 220L315 162"/><path d="M600 220L885 162"/><path d="M600 220L300 310"/><path d="M600 220L900 310"/><path d="M600 220L600 340"/></g>
+<g class="m" transform="translate(480 165)"><rect width="240" height="112" rx="18" fill="#09160e" stroke="#2cff88" stroke-opacity=".6"/><circle cx="24" cy="24" r="6" fill="#2cff88" class="p" filter="url(#gl)"/><text x="42" y="30" font-size="13" fill="#2cff88">CORE</text><text x="120" y="66" text-anchor="middle" font-size="27" font-weight="800" fill="#f1fff5">BAKUNITY</text><text x="120" y="91" text-anchor="middle" font-size="12" fill="#668672">BUILDING SYSTEMS THAT WORK</text></g>
+<g class="m" transform="translate(80 122)"><rect width="260" height="86" rx="14" fill="#07100a" stroke="#194c2b"/><text x="20" y="31" font-size="18" font-weight="700" fill="#f0fff4">OSVED</text><text x="20" y="55" font-size="12" fill="#2cff88">PERSONAL INTELLIGENCE</text><text x="20" y="73" font-size="11" fill="#64826e">signal → context → knowledge</text></g>
+<g class="m" transform="translate(860 122)"><rect width="260" height="86" rx="14" fill="#07100a" stroke="#194c2b"/><text x="20" y="31" font-size="18" font-weight="700" fill="#f0fff4">BAK VPN</text><text x="20" y="55" font-size="12" fill="#2cff88">PRIVATE NETWORK</text><text x="20" y="73" font-size="11" fill="#64826e">routing · privacy · infrastructure</text></g>
+<g class="m" transform="translate(62 276)"><rect width="300" height="86" rx="14" fill="#07100a" stroke="#194c2b"/><text x="20" y="31" font-size="18" font-weight="700" fill="#f0fff4">AI AUTOMATION</text><text x="20" y="55" font-size="12" fill="#2cff88">AGENTS + WORKFLOWS</text><text x="20" y="73" font-size="11" fill="#64826e">remove routine · increase leverage</text></g>
+<g class="m" transform="translate(838 276)"><rect width="300" height="86" rx="14" fill="#07100a" stroke="#194c2b"/><text x="20" y="31" font-size="18" font-weight="700" fill="#f0fff4">BACKUNITY ACCESS</text><text x="20" y="55" font-size="12" fill="#2cff88">REMOTE SYSTEMS</text><text x="20" y="73" font-size="11" fill="#64826e">access · device trust · control</text></g>
+<g class="m" transform="translate(472 330)"><rect width="256" height="58" rx="14" fill="#07100a" stroke="#194c2b"/><text x="128" y="25" text-anchor="middle" font-size="14" font-weight="700" fill="#f0fff4">INFRASTRUCTURE</text><text x="128" y="43" text-anchor="middle" font-size="11" fill="#2cff88">LINUX · DOCKER · NETWORKING</text></g>
 </svg>
