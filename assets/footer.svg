@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="130" viewBox="0 0 1200 130" role="img" aria-labelledby="title">
+  <title id="title">Build. Ship. Learn. Repeat.</title>
+  <defs>
+    <linearGradient id="line" x1="0" x2="1">
+      <stop offset="0%" stop-color="#2cff88" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#2cff88"/>
+      <stop offset="100%" stop-color="#2cff88" stop-opacity="0"/>
+    </linearGradient>
+    <style>
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; }
+      .pulse { animation: p 2.4s ease-in-out infinite; }
+      @keyframes p { 0%,100% { opacity:.35 } 50% { opacity:1 } }
+    </style>
+  </defs>
+  <rect width="1200" height="130" rx="18" fill="#070b08"/>
+  <rect x="1" y="1" width="1198" height="128" rx="17" fill="none" stroke="#183b25"/>
+  <rect x="160" y="30" width="880" height="1.5" fill="url(#line)" class="pulse"/>
+  <text x="600" y="78" text-anchor="middle" class="mono" font-size="25" font-weight="700" letter-spacing="4" fill="#f1fff5">BUILD · SHIP · LEARN · REPEAT</text>
+  <text x="600" y="105" text-anchor="middle" class="mono" font-size="13" fill="#2cff88">github.com/TimaBak</text>
+</svg>
