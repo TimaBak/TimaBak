@@ -18,17 +18,8 @@
   @keyframes p1{0%,2%{opacity:0}6%,29%{opacity:1}33%,100%{opacity:0}}@keyframes p2{0%,35%{opacity:0}39%,62%{opacity:1}66%,100%{opacity:0}}@keyframes p3{0%,68%{opacity:0}72%,95%{opacity:1}98%,100%{opacity:0}}
   </style>
 </defs>
-
-<rect width="1200" height="560" rx="28" fill="url(#bg)"/>
-<rect width="1200" height="560" rx="28" fill="url(#grid)"/>
-<ellipse cx="935" cy="275" rx="330" ry="280" fill="url(#halo)"/>
-<rect x="1.5" y="1.5" width="1197" height="557" rx="26.5" fill="none" stroke="#28613d" stroke-opacity=".78"/>
-<path d="M34 76H1166" stroke="#173a25"/>
-
-<circle cx="60" cy="42" r="6" fill="#ff5f57"/><circle cx="82" cy="42" r="6" fill="#febc2e"/><circle cx="104" cy="42" r="6" fill="#28c840"/>
-<text x="136" y="47" class="m" font-size="13" fill="#688775">tima@bakunity:~/profile</text>
-<text x="948" y="47" class="m" font-size="12" fill="#2cff88">[ ЛИЧНЫЙ УЗЕЛ // ONLINE ]</text>
-
+<rect width="1200" height="560" rx="28" fill="url(#bg)"/><rect width="1200" height="560" rx="28" fill="url(#grid)"/><ellipse cx="935" cy="275" rx="330" ry="280" fill="url(#halo)"/><rect x="1.5" y="1.5" width="1197" height="557" rx="26.5" fill="none" stroke="#28613d" stroke-opacity=".78"/><path d="M34 76H1166" stroke="#173a25"/>
+<circle cx="60" cy="42" r="6" fill="#ff5f57"/><circle cx="82" cy="42" r="6" fill="#febc2e"/><circle cx="104" cy="42" r="6" fill="#28c840"/><text x="136" y="47" class="m" font-size="13" fill="#688775">tima@bakunity:~/profile</text><text x="948" y="47" class="m" font-size="12" fill="#2cff88">[ PERSONAL NODE // ONLINE ]</text>
 <g clip-path="url(#rainClip)" class="m" fill="#2cff88" font-size="13">
   <text x="704" y="-140" class="rain1" opacity=".28">0<tspan x="704" dy="20">1</tspan><tspan x="704" dy="20">AI</tspan><tspan x="704" dy="20">BAK</tspan><tspan x="704" dy="20">SYS</tspan><tspan x="704" dy="20">01</tspan><tspan x="704" dy="20">NET</tspan><tspan x="704" dy="20">11</tspan></text>
   <text x="758" y="-60" class="rain2" opacity=".18">1<tspan x="758" dy="20">0</tspan><tspan x="758" dy="20">OS</tspan><tspan x="758" dy="20">VED</tspan><tspan x="758" dy="20">AI</tspan><tspan x="758" dy="20">10</tspan><tspan x="758" dy="20">BOT</tspan></text>
@@ -39,41 +30,29 @@
   <text x="1062" y="-190" class="rain7" opacity=".26">NET<tspan x="1062" dy="20">11</tspan><tspan x="1062" dy="20">BAK</tspan><tspan x="1062" dy="20">OS</tspan><tspan x="1062" dy="20">AI</tspan><tspan x="1062" dy="20">SYS</tspan></text>
   <text x="1122" y="-40" class="rain8" opacity=".16">01<tspan x="1122" dy="20">VPN</tspan><tspan x="1122" dy="20">AI</tspan><tspan x="1122" dy="20">NET</tspan><tspan x="1122" dy="20">10</tspan><tspan x="1122" dy="20">OPS</tspan></text>
 </g>
-
-<text x="58" y="118" class="m" font-size="14" fill="#67d98b">$ whoami --verbose</text>
-<text x="58" y="198" class="m" font-size="66" font-weight="800" letter-spacing="10" fill="#f3fff6">TIMA BAK</text>
-<rect x="58" y="218" width="540" height="1.5" fill="#2cff88" opacity=".48"/>
-<text x="58" y="252" class="m" font-size="16" fill="#789a84">ОСНОВАТЕЛЬ · СОЗДАТЕЛЬ · СИСТЕМНЫЙ ПОДХОД</text>
-
+<text x="58" y="118" class="m" font-size="14" fill="#67d98b">$ whoami --verbose</text><text x="58" y="198" class="m" font-size="66" font-weight="800" letter-spacing="10" fill="#f3fff6">TIMA BAK</text><rect x="58" y="218" width="540" height="1.5" fill="#2cff88" opacity=".48"/>
+<text x="58" y="252" class="m" font-size="16" fill="#789a84">ПРЕДПРИНИМАТЕЛЬ · PRODUCT BUILDER · СИСТЕМНЫЙ ИНЖЕНЕР</text>
 <g class="m" font-size="20" font-weight="700" fill="#2cff88" filter="url(#glow)">
-  <text x="58" y="310" class="p1">AI + ИНФРАСТРУКТУРА + АВТОМАТИЗАЦИЯ</text>
-  <text x="58" y="310" class="p2">СТРОЮ ПРОДУКТЫ, КОТОРЫЕ РАБОТАЮТ</text>
-  <text x="58" y="310" class="p3">ИДЕЯ → СИСТЕМА → ПОЛЬЗОВАТЕЛИ</text>
+  <text x="58" y="310" class="p1">СТРОЮ ПРОДУКТЫ НА СТЫКЕ AI, СОФТА И ИНФРАСТРУКТУРЫ</text>
+  <text x="58" y="310" class="p2">ИДЕЯ → ПРОТОТИП → ПРОДУКТ → МАСШТАБ</text>
+  <text x="58" y="310" class="p3">АВТОМАТИЗАЦИЯ · СЕТИ · СИСТЕМЫ · ПРОДУКТЫ</text>
 </g>
-
 <g class="m">
   <rect x="58" y="350" width="540" height="122" rx="16" fill="#061009" stroke="#183f27"/>
-  <text x="80" y="380" font-size="12" fill="#5f806b">SYSTEM PATH</text>
-  <text x="80" y="414" font-size="14" fill="#c5d8ca">idea</text><text x="142" y="414" font-size="14" fill="#2cff88">→</text>
-  <text x="172" y="414" font-size="14" fill="#c5d8ca">prototype</text><text x="272" y="414" font-size="14" fill="#2cff88">→</text>
-  <text x="302" y="414" font-size="14" fill="#c5d8ca">system</text><text x="376" y="414" font-size="14" fill="#2cff88">→</text>
-  <text x="406" y="414" font-size="14" fill="#c5d8ca">users</text><text x="468" y="414" font-size="14" fill="#2cff88">→</text>
-  <text x="498" y="414" font-size="14" fill="#c5d8ca">iterate</text>
-  <text x="80" y="448" font-size="12" fill="#678471">СОЗДАВАТЬ → ЗАПУСКАТЬ → ИЗМЕРЯТЬ → УЛУЧШАТЬ</text>
+  <text x="80" y="380" font-size="12" fill="#5f806b">КАК Я РАБОТАЮ</text>
+  <text x="80" y="414" font-size="14" fill="#c5d8ca">идея</text><text x="132" y="414" font-size="14" fill="#2cff88">→</text><text x="162" y="414" font-size="14" fill="#c5d8ca">прототип</text><text x="254" y="414" font-size="14" fill="#2cff88">→</text><text x="284" y="414" font-size="14" fill="#c5d8ca">продукт</text><text x="356" y="414" font-size="14" fill="#2cff88">→</text><text x="386" y="414" font-size="14" fill="#c5d8ca">пользователи</text><text x="500" y="414" font-size="14" fill="#2cff88">→</text><text x="530" y="414" font-size="14" fill="#c5d8ca">рост</text>
+  <text x="80" y="448" font-size="12" fill="#678471">СОБРАТЬ → ЗАПУСТИТЬ → ПРОВЕРИТЬ → УЛУЧШИТЬ</text>
 </g>
-
 <g class="m">
   <rect x="742" y="118" width="360" height="268" rx="18" fill="#061009" fill-opacity=".86" stroke="#245d39"/>
-  <text x="770" y="150" font-size="13" fill="#5f806b">СТАТУС УЗЛА</text>
-  <circle cx="1068" cy="145" r="6" fill="#2cff88" class="pulse" filter="url(#glow)"/>
-  <circle cx="772" cy="186" r="4.5" fill="#2cff88" class="pulse"/><text x="790" y="190" font-size="14" fill="#d6e5da">BAKUNITY</text><text x="1048" y="190" text-anchor="end" font-size="12" fill="#2cff88">СВЯЗАНО</text><path d="M770 204H1074" stroke="#183b25"/><circle cx="772" cy="233" r="4.5" fill="#2cff88" class="pulse"/><text x="790" y="237" font-size="14" fill="#d6e5da">OSVED</text><text x="1048" y="237" text-anchor="end" font-size="12" fill="#2cff88">В РАБОТЕ</text><path d="M770 251H1074" stroke="#183b25"/><circle cx="772" cy="280" r="4.5" fill="#2cff88" class="pulse"/><text x="790" y="284" font-size="14" fill="#d6e5da">BAK VPN</text><text x="1048" y="284" text-anchor="end" font-size="12" fill="#2cff88">ОНЛАЙН</text><path d="M770 298H1074" stroke="#183b25"/><circle cx="772" cy="327" r="4.5" fill="#2cff88" class="pulse"/><text x="790" y="331" font-size="14" fill="#d6e5da">AI / AUTO</text><text x="1048" y="331" text-anchor="end" font-size="12" fill="#2cff88">АКТИВНО</text><path d="M770 345H1074" stroke="#183b25"/>
-  <text x="770" y="367" font-size="11" fill="#607c69">AI · INFRA · NETWORK · PRODUCTS</text>
+  <text x="770" y="150" font-size="13" fill="#5f806b">СЕЙЧАС В ФОКУСЕ</text><circle cx="1068" cy="145" r="6" fill="#2cff88" class="pulse" filter="url(#glow)"/>
+  <circle cx="772" cy="186" r="4.5" fill="#2cff88" class="pulse"/><text x="790" y="190" font-size="14" fill="#d6e5da">BAKUNITY</text><text x="1048" y="190" text-anchor="end" font-size="12" fill="#2cff88">ЭКОСИСТЕМА</text><path d="M770 204H1074" stroke="#183b25"/>
+  <circle cx="772" cy="233" r="4.5" fill="#2cff88" class="pulse"/><text x="790" y="237" font-size="14" fill="#d6e5da">OSVED</text><text x="1048" y="237" text-anchor="end" font-size="12" fill="#2cff88">AI-ПРОДУКТ</text><path d="M770 251H1074" stroke="#183b25"/>
+  <circle cx="772" cy="280" r="4.5" fill="#2cff88" class="pulse"/><text x="790" y="284" font-size="14" fill="#d6e5da">BAK VPN</text><text x="1048" y="284" text-anchor="end" font-size="12" fill="#2cff88">СЕТИ</text><path d="M770 298H1074" stroke="#183b25"/>
+  <circle cx="772" cy="327" r="4.5" fill="#2cff88" class="pulse"/><text x="790" y="331" font-size="14" fill="#d6e5da">AUTOMATION</text><text x="1048" y="331" text-anchor="end" font-size="12" fill="#2cff88">AI + OPS</text><path d="M770 345H1074" stroke="#183b25"/>
+  <text x="770" y="367" font-size="11" fill="#607c69">BUILD · SHIP · OPERATE · ITERATE</text>
 </g>
-
-<g class="dash" stroke="#2cff88" stroke-opacity=".24" fill="none"><path d="M1102 412C1050 450 1004 470 938 480"/><circle cx="934" cy="482" r="44"/><circle cx="934" cy="482" r="24"/></g>
-<circle cx="934" cy="482" r="4" fill="#2cff88" class="pulse" filter="url(#glow)"/>
-
-<g transform="translate(58 518)"><circle cx="7" cy="7" r="6" fill="#2cff88" class="pulse" filter="url(#glow)"/><text x="24" y="12" class="m" font-size="13" font-weight="700" fill="#2cff88">СИСТЕМА ОНЛАЙН</text><text x="180" y="12" class="m" font-size="13" fill="#55715f">// BAKUNITY NODE</text><rect x="326" y="-2" width="9" height="17" fill="#2cff88" class="blink"/></g>
-
+<g class="dash" stroke="#2cff88" stroke-opacity=".24" fill="none"><path d="M1102 412C1050 450 1004 470 938 480"/><circle cx="934" cy="482" r="44"/><circle cx="934" cy="482" r="24"/></g><circle cx="934" cy="482" r="4" fill="#2cff88" class="pulse" filter="url(#glow)"/>
+<g transform="translate(58 518)"><circle cx="7" cy="7" r="6" fill="#2cff88" class="pulse" filter="url(#glow)"/><text x="24" y="12" class="m" font-size="13" font-weight="700" fill="#2cff88">BUILD MODE</text><text x="118" y="12" class="m" font-size="13" fill="#55715f">// BAKUNITY · OSVED · BAK VPN</text><rect x="350" y="-2" width="9" height="17" fill="#2cff88" class="blink"/></g>
 <rect x="24" y="-18" width="1152" height="3" fill="url(#scan)" class="scan" filter="url(#glow)"/>
 </svg>
