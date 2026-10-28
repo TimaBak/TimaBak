@@ -8,7 +8,8 @@ on:
     branches:
       - main
     paths-ignore:
-      - "README.md"\n      - "README.en.md"
+      - "README.md"
+      - "README.en.md"
 
 permissions:
   contents: write
