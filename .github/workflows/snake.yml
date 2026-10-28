@@ -23,7 +23,7 @@ jobs:
     timeout-minutes: 5
 
     steps:
-      - name: Generate snake SVGs
+      - name: Generate contribution grid
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
@@ -31,98 +31,174 @@ jobs:
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=%232cff88
 
-      - name: Style contribution Matrix
+      - name: Turn grid into Matrix Snake game
         run: |
           python - <<'PY'
           from pathlib import Path
 
-          food = [
-              (34, 18, 0.0), (82, 66, 1.3), (130, 34, 2.6), (178, 82, 3.9),
-              (226, 50, 5.2), (274, 18, 6.5), (322, 98, 7.8), (370, 50, 9.1),
-              (418, 82, 10.4), (466, 34, 11.7), (514, 98, 13.0), (562, 66, 14.3),
-              (610, 18, 15.6), (658, 82, 16.9), (706, 50, 18.2), (754, 98, 19.5),
-              (802, 34, 20.8), (50, 98, 22.1), (146, 66, 23.4), (242, 34, 24.7),
-              (338, 18, 2.0), (434, 98, 4.5), (530, 50, 7.0), (626, 34, 9.5),
-              (722, 66, 12.0), (818, 82, 14.5), (98, 18, 17.0), (194, 98, 19.0),
-              (290, 66, 21.0), (386, 34, 23.0), (578, 82, 1.0), (770, 18, 11.0),
-          ]
+          DURATION = 24.0
 
-          glyph_cols = [
-              (22, -32, "數據系統網絡智能自動代碼節點", 0.0),
-              (116, -84, "智能網絡系統數據代碼自動節點", 2.1),
-              (214, -18, "系統節點數據智能網絡代碼自動", 4.2),
-              (314, -96, "網絡智能代碼系統節點數據自動", 1.3),
-              (414, -44, "代碼系統智能數據網絡節點自動", 3.5),
-              (516, -110, "自動智能系統網絡數據代碼節點", 5.1),
-              (618, -28, "節點數據網絡智能代碼系統自動", 2.8),
-              (718, -92, "數據智能節點系統網絡自動代碼", 4.7),
-              (816, -40, "系統網絡智能數據節點代碼自動", 1.8),
-          ]
+          # Three looping routes. Coordinates are aligned to the contribution grid.
+          routes = {
+              "a": [(66,18),(210,18),(210,82),(370,82),(370,34),(530,34),(530,98),(690,98),(690,50),(818,50),(818,18),(66,18)],
+              "b": [(754,66),(610,66),(610,18),(466,18),(466,98),(322,98),(322,50),(178,50),(178,82),(34,82),(34,34),(754,66)],
+              "c": [(130,98),(130,34),(274,34),(274,66),(418,66),(418,18),(562,18),(562,82),(706,82),(706,34),(802,34),(130,98)],
+          }
 
-          css = """
-          <style id="bak-matrix-style">
-          @keyframes bakGlyphRain {
-            0% { transform: translateY(-80px); opacity: 0; }
-            12% { opacity: .11; }
-            86% { opacity: .07; }
-            100% { transform: translateY(250px); opacity: 0; }
+          # Phase offsets make the three snakes feel independent while keeping food synchronized.
+          phase = {"a": 0.0, "b": -8.0, "c": -16.0}
+          snake_color = {"a":"#2cff88","b":"#63ff9d","c":"#b2ffcb"}
+
+          # Food at route waypoints. "spawn" is percentage when a square appears;
+          # "eat" is percentage when the snake head reaches it.
+          food_specs = {
+              "a": [(1,0,9),(2,0,18),(3,5,27),(4,0,36),(5,18,45),(6,0,55),(7,38,64),(8,0,73),(9,58,82),(10,0,91)],
+              "b": [(1,0,9),(2,0,18),(3,0,27),(4,8,36),(5,0,45),(6,24,55),(7,0,64),(8,46,73),(9,0,82),(10,62,91)],
+              "c": [(1,0,9),(2,0,18),(3,6,27),(4,0,36),(5,22,45),(6,0,55),(7,42,64),(8,0,73),(9,60,82),(10,0,91)],
           }
-          @keyframes bakFoodSquare {
-            0%, 7%, 100% { opacity: 0; transform: scale(.72); }
-            8%, 52% { opacity: .98; transform: scale(1); }
-            53%, 100% { opacity: 0; transform: scale(.72); }
-          }
-          .bak-glyph {
-            fill: #2cff88;
-            font-family: "Noto Sans CJK SC","Microsoft YaHei","PingFang SC",sans-serif;
-            font-size: 10px;
-            opacity: .08;
-            animation: bakGlyphRain 9.5s linear infinite;
-          }
-          .bak-food-square {
-            fill: #2cff88;
-            stroke: #7dffad;
-            stroke-width: .45;
-            transform-box: fill-box;
-            transform-origin: center;
-            animation: bakFoodSquare 25300ms steps(1,end) infinite;
-          }
-          </style>
-          """
+
+          # Half-width katakana + digits + latin fragments: closer to the visual language
+          # associated with Matrix code than Chinese text.
+          matrix_columns = [
+              (18,-70,"ｱｲｳｴｵｶｷｸｹｺ0123456789ZX",0.0),
+              (86,-130,"ｻｼｽｾｿﾀﾁﾂﾃﾄ9876543210AI",1.4),
+              (154,-42,"ﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎ10110101SYS",2.8),
+              (226,-105,"ﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘ01001101NET",4.2),
+              (298,-56,"ﾙﾚﾛﾜｦﾝｱｶｻﾀ11001010BAK",0.9),
+              (370,-118,"ｲｷｼﾁﾆﾋﾐﾘ00110110AI",2.1),
+              (442,-38,"ｳｸｽﾂﾇﾌﾑﾙ10010111OPS",3.6),
+              (514,-92,"ｴｹｾﾃﾈﾍﾒﾚ01101001API",5.0),
+              (586,-146,"ｵｺｿﾄﾉﾎﾓﾛ11010010VPN",1.8),
+              (658,-62,"ｱｼﾂﾈﾌﾔﾘ01010110SYS",3.1),
+              (730,-122,"ｶｾﾄﾊﾑﾖﾛ10101100NET",4.5),
+              (802,-48,"ｻﾃﾉﾍﾒﾜ01100101AI",0.6),
+          ]
 
           for path in Path("dist").glob("*.svg"):
               s = path.read_text()
               s = s.replace("width:12px;height:12px", "width:14px;height:14px")
-              if "github-dark" in path.name:
-                  s = s.replace("--ce:#161b22", "--ce:#0c1d13")
-                  s = s.replace("--c0:#161b22", "--c0:#0c1d13")
+              if "dark" in path.name:
+                  s = s.replace("--ce:#161b22", "--ce:#0a1710")
+                  s = s.replace("--c0:#161b22", "--c0:#0a1710")
 
-              glyphs = []
-              for x, y, chars, delay in glyph_cols:
-                  tspans = "".join(
-                      f'<tspan x="{x}" dy="16">{ch}</tspan>' for ch in chars
-                  )
+              # Hide snk's original snake and bottom progress/level bars.
+              base_css = """
+              <style id="matrix-game-style">
+              .u,.s{display:none!important}
+              @keyframes matrixRain{
+                0%{transform:translateY(-100px);opacity:0}
+                10%{opacity:.24}
+                82%{opacity:.15}
+                100%{transform:translateY(300px);opacity:0}
+              }
+              .matrix-code{
+                fill:#2cff88;
+                font-family:"MS Gothic","Yu Gothic","Noto Sans JP","Arial Unicode MS",monospace;
+                font-size:10px;
+                font-weight:700;
+                letter-spacing:1px;
+                filter:drop-shadow(0 0 2px rgba(44,255,136,.45));
+                animation:matrixRain 8.8s linear infinite;
+              }
+              .game-food{
+                fill:#2cff88;
+                stroke:#a8ffc6;
+                stroke-width:.55;
+                filter:drop-shadow(0 0 2px rgba(44,255,136,.8));
+              }
+              .snake-seg{
+                rx:3px;ry:3px;
+                filter:drop-shadow(0 0 2.5px rgba(44,255,136,.75));
+              }
+              .snake-head{
+                stroke:#eafff0;
+                stroke-width:.7;
+              }
+              </style>
+              """
+
+              glyphs = ['<g aria-hidden="true">']
+              for x,y,chars,delay in matrix_columns:
+                  spans = "".join(f'<tspan x="{x}" dy="14">{ch}</tspan>' for ch in chars)
                   glyphs.append(
-                      f'<text class="bak-glyph" x="{x}" y="{y}" '
-                      f'style="animation-delay:-{delay}s">{tspans}</text>'
+                      f'<text class="matrix-code" x="{x}" y="{y}" '
+                      f'style="animation-delay:-{delay}s">{spans}</text>'
                   )
-              glyph_layer = '<g aria-hidden="true" opacity=".8">' + "".join(glyphs) + '</g>'
+              glyphs.append('</g>')
+              glyph_layer = "".join(glyphs)
 
-              squares = []
-              for x, y, delay in food:
-                  squares.append(
-                      f'<rect class="bak-food-square" x="{x}" y="{y}" width="12" height="12" '
-                      f'rx="2" ry="2" style="animation-delay:-{delay}s"/>'
+              css_parts = []
+              game_parts = ['<g id="matrix-snake-game" aria-hidden="true">']
+
+              for name, pts in routes.items():
+                  # Snake path keyframes.
+                  frames = []
+                  last = len(pts)-1
+                  for i,(x,y) in enumerate(pts):
+                      pct = round(i*100/last, 2)
+                      frames.append(f'{pct}%{{transform:translate({x}px,{y}px)}}')
+                  css_parts.append(
+                      f'@keyframes snake_{name}'+'{'+"".join(frames)+'}'
                   )
-              food_layer = '<g aria-hidden="true">' + "".join(squares) + '</g>'
+                  css_parts.append(
+                      f'.snake-{name}'+'{'
+                      f'animation:snake_{name} {DURATION}s linear infinite;'
+                      f'animation-delay:{phase[name]}s'
+                      '}'
+                  )
 
-              s = s.replace("</desc>", "</desc>" + css + glyph_layer, 1)
+                  # Six segments per snake. They use staggered positive delay to trail the head.
+                  game_parts.append(f'<g class="snake-{name}">')
+                  for seg in range(6):
+                      xoff = -seg*10
+                      size = 13 if seg == 0 else max(7, 12-seg)
+                      opacity = max(.38, 1-seg*.1)
+                      cls = "snake-seg snake-head" if seg == 0 else "snake-seg"
+                      game_parts.append(
+                          f'<rect class="{cls}" x="{xoff}" y="0" width="{size}" height="{size}" '
+                          f'fill="{snake_color[name]}" opacity="{opacity}"/>'
+                      )
+                  game_parts.append('</g>')
+
+                  # Food is synchronized to the same route/phase. It stays visible until eaten.
+                  for idx,spawn,eat in food_specs[name]:
+                      # Food sits at the corresponding route waypoint.
+                      point_idx = min(idx, len(pts)-2)
+                      x,y = pts[point_idx]
+                      anim = f'food_{name}_{idx}'
+                      if spawn <= 0:
+                          kf = (
+                              f'0%,{eat-.5}%{{opacity:1;transform:scale(1)}}'
+                              f'{eat}%,99.7%{{opacity:0;transform:scale(.55)}}'
+                              f'100%{{opacity:1;transform:scale(1)}}'
+                          )
+                      else:
+                          kf = (
+                              f'0%,{spawn-.5}%{{opacity:0;transform:scale(.55)}}'
+                              f'{spawn}%,{eat-.5}%{{opacity:1;transform:scale(1)}}'
+                              f'{eat}%,100%{{opacity:0;transform:scale(.55)}}'
+                          )
+                      css_parts.append(f'@keyframes {anim}'+'{'+kf+'}')
+                      game_parts.append(
+                          f'<rect class="game-food" x="{x}" y="{y}" width="12" height="12" rx="2" ry="2" '
+                          f'style="transform-box:fill-box;transform-origin:center;'
+                          f'animation:{anim} {DURATION}s steps(1,end) infinite;animation-delay:{phase[name]}s"/>'
+                      )
+
+              game_parts.append('</g>')
+              extra_css = '<style id="matrix-game-animations">' + "".join(css_parts) + '</style>'
+              game_layer = "".join(game_parts)
+
+              # Background code comes right after desc, so the actual contribution grid stays above it.
+              s = s.replace("</desc>", "</desc>" + base_css + extra_css + glyph_layer, 1)
+
+              # Game layer goes immediately before snk's hidden progress/snake elements.
               marker = '<rect class="u u0"'
-              s = s.replace(marker, food_layer + marker, 1)
+              s = s.replace(marker, game_layer + marker, 1)
               path.write_text(s)
           PY
 
-      - name: Publish snake branch
+      - name: Publish game branch
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
