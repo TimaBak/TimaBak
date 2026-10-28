@@ -1,33 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="260" viewBox="0 0 1200 260" role="img" aria-labelledby="title">
-<title id="title">TimaBak system status</title>
-<defs>
-  <linearGradient id="bg" x1="0" x2="1"><stop stop-color="#050806"/><stop offset="1" stop-color="#08110b"/></linearGradient>
-  <filter id="g"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-  <style>
-    .m{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace}
-    .p{animation:p 2.3s ease-in-out infinite}
-    .d{stroke-dasharray:8 8;animation:d 10s linear infinite}
-    .b1{animation:w1 5s ease-in-out infinite}.b2{animation:w2 6s ease-in-out infinite}.b3{animation:w3 7s ease-in-out infinite}
-    @keyframes p{0%,100%{opacity:.45}50%{opacity:1}} @keyframes d{to{stroke-dashoffset:-160}}
-    @keyframes w1{0%,100%{width:170px}50%{width:205px}} @keyframes w2{0%,100%{width:150px}50%{width:195px}} @keyframes w3{0%,100%{width:188px}50%{width:215px}}
-  </style>
-</defs>
-<rect width="1200" height="260" rx="22" fill="url(#bg)"/><rect x="1" y="1" width="1198" height="258" rx="21" fill="none" stroke="#1c4a2d"/>
-<text x="42" y="48" class="m" font-size="15" fill="#5f806b">$ system.status --verbose</text>
-<text x="42" y="82" class="m" font-size="25" font-weight="700" fill="#f1fff5">CURRENT OPERATING MODE</text>
-<text x="42" y="114" class="m" font-size="15" fill="#2cff88">BUILDING / SHIPPING / LEARNING</text>
-<path d="M420 40V220" stroke="#173822"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="280" viewBox="0 0 1200 280" role="img" aria-labelledby="title">
+<title id="title">System status</title><defs><linearGradient id="bg" x1="0" x2="1"><stop stop-color="#050806"/><stop offset="1" stop-color="#08110b"/></linearGradient><filter id="g"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter><style>.m{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace}.p{animation:p 2.3s ease-in-out infinite}.d{stroke-dasharray:8 8;animation:d 10s linear infinite}@keyframes p{0%,100%{opacity:.42}50%{opacity:1}}@keyframes d{to{stroke-dashoffset:-160}}</style></defs>
+<rect width="1200" height="280" rx="22" fill="url(#bg)"/><rect x="1" y="1" width="1198" height="278" rx="21" fill="none" stroke="#1c4a2d"/>
+<text x="42" y="48" class="m" font-size="15" fill="#5f806b">$ system.status --verbose</text><text x="42" y="84" class="m" font-size="25" font-weight="700" fill="#f1fff5">CURRENT OPERATING MODE</text><text x="42" y="116" class="m" font-size="15" fill="#2cff88">BUILDING / SHIPPING / LEARNING</text><text x="42" y="158" class="m" font-size="13" fill="#799886">AI + SOFTWARE + INFRASTRUCTURE</text><text x="42" y="184" class="m" font-size="13" fill="#799886">FROM IDEA → WORKING SYSTEM → REAL USERS</text><text x="42" y="222" class="m" font-size="12" fill="#516d5b">Founder @ Bakunity · Building OSVED · Running Bak VPN</text>
+<path d="M430 36V244" stroke="#173822"/>
 <g class="m" font-size="13">
-  <g transform="translate(462 50)"><circle cx="7" cy="7" r="6" fill="#2cff88" class="p" filter="url(#g)"/><text x="24" y="12" fill="#c4d7ca">AI SYSTEMS</text><text x="242" y="12" fill="#2cff88">BUILDING</text><rect x="0" y="29" width="260" height="4" rx="2" fill="#12291a"/><rect x="0" y="29" height="4" rx="2" fill="#2cff88" class="b1"/></g>
-  <g transform="translate(462 110)"><circle cx="7" cy="7" r="6" fill="#2cff88" class="p"/><text x="24" y="12" fill="#c4d7ca">INFRASTRUCTURE</text><text x="242" y="12" fill="#2cff88">ONLINE</text><rect x="0" y="29" width="260" height="4" rx="2" fill="#12291a"/><rect x="0" y="29" height="4" rx="2" fill="#2cff88" class="b2"/></g>
-  <g transform="translate(462 170)"><circle cx="7" cy="7" r="6" fill="#2cff88" class="p"/><text x="24" y="12" fill="#c4d7ca">PRODUCTS</text><text x="242" y="12" fill="#2cff88">SHIPPING</text><rect x="0" y="29" width="260" height="4" rx="2" fill="#12291a"/><rect x="0" y="29" height="4" rx="2" fill="#2cff88" class="b3"/></g>
+<g transform="translate(470 50)"><circle cx="7" cy="7" r="6" fill="#2cff88" class="p" filter="url(#g)"/><text x="24" y="12" fill="#c4d7ca">AI SYSTEMS</text><text x="232" y="12" fill="#2cff88">BUILDING</text><rect y="30" width="250" height="4" rx="2" fill="#12291a"/><rect y="30" width="196" height="4" rx="2" fill="#2cff88" opacity=".75"/></g>
+<g transform="translate(470 112)"><circle cx="7" cy="7" r="6" fill="#2cff88" class="p"/><text x="24" y="12" fill="#c4d7ca">INFRASTRUCTURE</text><text x="232" y="12" fill="#2cff88">ONLINE</text><rect y="30" width="250" height="4" rx="2" fill="#12291a"/><rect y="30" width="214" height="4" rx="2" fill="#2cff88" opacity=".75"/></g>
+<g transform="translate(470 174)"><circle cx="7" cy="7" r="6" fill="#2cff88" class="p"/><text x="24" y="12" fill="#c4d7ca">PRODUCTS</text><text x="232" y="12" fill="#2cff88">SHIPPING</text><rect y="30" width="250" height="4" rx="2" fill="#12291a"/><rect y="30" width="182" height="4" rx="2" fill="#2cff88" opacity=".75"/></g>
 </g>
-<g transform="translate(830 60)" class="m">
-  <circle cx="130" cy="70" r="62" fill="none" stroke="#21462d"/>
-  <circle cx="130" cy="70" r="42" fill="none" stroke="#2cff88" stroke-opacity=".35" class="d"/>
-  <circle cx="130" cy="70" r="5" fill="#2cff88" class="p" filter="url(#g)"/>
-  <path d="M130 70L35 35M130 70L220 22M130 70L230 122M130 70L58 150" stroke="#2cff88" stroke-opacity=".28" class="d"/>
-  <text x="0" y="24" font-size="12" fill="#7fa38b">AI</text><text x="226" y="18" font-size="12" fill="#7fa38b">INFRA</text><text x="238" y="138" font-size="12" fill="#7fa38b">VPN</text><text x="18" y="166" font-size="12" fill="#7fa38b">OSVED</text>
-  <text x="130" y="205" text-anchor="middle" font-size="13" fill="#2cff88">BAKUNITY NETWORK</text>
-</g>
+<g transform="translate(845 58)" class="m"><circle cx="120" cy="78" r="66" fill="none" stroke="#21462d"/><circle cx="120" cy="78" r="44" fill="none" stroke="#2cff88" stroke-opacity=".35" class="d"/><circle cx="120" cy="78" r="5" fill="#2cff88" class="p" filter="url(#g)"/><path d="M120 78L28 38M120 78L212 28M120 78L220 128M120 78L48 164" stroke="#2cff88" stroke-opacity=".28" class="d"/><text x="-2" y="28" font-size="12" fill="#7fa38b">AI</text><text x="216" y="24" font-size="12" fill="#7fa38b">INFRA</text><text x="228" y="142" font-size="12" fill="#7fa38b">VPN</text><text x="8" y="182" font-size="12" fill="#7fa38b">OSVED</text><text x="120" y="220" text-anchor="middle" font-size="13" fill="#2cff88">BAKUNITY NETWORK</text></g>
 </svg>
