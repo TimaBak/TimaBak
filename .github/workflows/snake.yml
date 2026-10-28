@@ -31,32 +31,61 @@ jobs:
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=%232cff88
 
-      - name: Style matrix and add animated food particles
+      - name: Style contribution Matrix
         run: |
           python - <<'PY'
           from pathlib import Path
 
-          points = [
-              (42, 26, 0.0), (86, 86, 1.2), (128, 46, 2.4), (174, 112, 0.7),
-              (218, 72, 3.1), (262, 30, 1.8), (308, 126, 4.0), (352, 58, 2.8),
-              (398, 96, 0.4), (444, 36, 3.6), (488, 118, 1.5), (532, 66, 4.4),
-              (578, 28, 2.1), (624, 104, 0.9), (668, 54, 3.3), (712, 126, 1.1),
-              (754, 78, 4.7), (798, 34, 2.6), (836, 108, 0.2), (66, 134, 3.9),
-              (196, 24, 1.6), (370, 136, 4.2), (552, 138, 2.9), (730, 18, 1.9)
+          food = [
+              (34, 18, 0.0), (82, 66, 1.3), (130, 34, 2.6), (178, 82, 3.9),
+              (226, 50, 5.2), (274, 18, 6.5), (322, 98, 7.8), (370, 50, 9.1),
+              (418, 82, 10.4), (466, 34, 11.7), (514, 98, 13.0), (562, 66, 14.3),
+              (610, 18, 15.6), (658, 82, 16.9), (706, 50, 18.2), (754, 98, 19.5),
+              (802, 34, 20.8), (50, 98, 22.1), (146, 66, 23.4), (242, 34, 24.7),
+              (338, 18, 2.0), (434, 98, 4.5), (530, 50, 7.0), (626, 34, 9.5),
+              (722, 66, 12.0), (818, 82, 14.5), (98, 18, 17.0), (194, 98, 19.0),
+              (290, 66, 21.0), (386, 34, 23.0), (578, 82, 1.0), (770, 18, 11.0),
           ]
 
-          extra_css = """
-          <style>
-          @keyframes bakFood {
-            0%, 14%, 100% { opacity: 0; transform: scale(.45); }
-            24%, 60% { opacity: .95; transform: scale(1); }
-            74% { opacity: .15; transform: scale(.65); }
+          glyph_cols = [
+              (22, -32, "數據系統網絡智能自動代碼節點", 0.0),
+              (116, -84, "智能網絡系統數據代碼自動節點", 2.1),
+              (214, -18, "系統節點數據智能網絡代碼自動", 4.2),
+              (314, -96, "網絡智能代碼系統節點數據自動", 1.3),
+              (414, -44, "代碼系統智能數據網絡節點自動", 3.5),
+              (516, -110, "自動智能系統網絡數據代碼節點", 5.1),
+              (618, -28, "節點數據網絡智能代碼系統自動", 2.8),
+              (718, -92, "數據智能節點系統網絡自動代碼", 4.7),
+              (816, -40, "系統網絡智能數據節點代碼自動", 1.8),
+          ]
+
+          css = """
+          <style id="bak-matrix-style">
+          @keyframes bakGlyphRain {
+            0% { transform: translateY(-80px); opacity: 0; }
+            12% { opacity: .11; }
+            86% { opacity: .07; }
+            100% { transform: translateY(250px); opacity: 0; }
           }
-          .bak-food {
+          @keyframes bakFoodSquare {
+            0%, 7%, 100% { opacity: 0; transform: scale(.72); }
+            8%, 52% { opacity: .98; transform: scale(1); }
+            53%, 100% { opacity: 0; transform: scale(.72); }
+          }
+          .bak-glyph {
             fill: #2cff88;
+            font-family: "Noto Sans CJK SC","Microsoft YaHei","PingFang SC",sans-serif;
+            font-size: 10px;
+            opacity: .08;
+            animation: bakGlyphRain 9.5s linear infinite;
+          }
+          .bak-food-square {
+            fill: #2cff88;
+            stroke: #7dffad;
+            stroke-width: .45;
             transform-box: fill-box;
             transform-origin: center;
-            animation: bakFood 5200ms ease-in-out infinite;
+            animation: bakFoodSquare 25300ms steps(1,end) infinite;
           }
           </style>
           """
@@ -64,19 +93,32 @@ jobs:
           for path in Path("dist").glob("*.svg"):
               s = path.read_text()
               s = s.replace("width:12px;height:12px", "width:14px;height:14px")
-              s = s.replace("--ce:#161b22", "--ce:#0c1d13")
-              s = s.replace("--c0:#161b22", "--c0:#0c1d13")
+              if "github-dark" in path.name:
+                  s = s.replace("--ce:#161b22", "--ce:#0c1d13")
+                  s = s.replace("--c0:#161b22", "--c0:#0c1d13")
 
-              dots = []
-              for i, (x, y, delay) in enumerate(points):
-                  r = 2.2 if i % 3 else 2.8
-                  dots.append(
-                      f'<circle class="bak-food" cx="{x}" cy="{y}" r="{r}" '
-                      f'style="animation-delay:-{delay}s"/>'
+              glyphs = []
+              for x, y, chars, delay in glyph_cols:
+                  tspans = "".join(
+                      f'<tspan x="{x}" dy="16">{ch}</tspan>' for ch in chars
                   )
+                  glyphs.append(
+                      f'<text class="bak-glyph" x="{x}" y="{y}" '
+                      f'style="animation-delay:-{delay}s">{tspans}</text>'
+                  )
+              glyph_layer = '<g aria-hidden="true" opacity=".8">' + "".join(glyphs) + '</g>'
 
-              overlay = extra_css + '<g aria-hidden="true">' + ''.join(dots) + '</g>'
-              s = s.replace("</svg>", overlay + "</svg>")
+              squares = []
+              for x, y, delay in food:
+                  squares.append(
+                      f'<rect class="bak-food-square" x="{x}" y="{y}" width="12" height="12" '
+                      f'rx="2" ry="2" style="animation-delay:-{delay}s"/>'
+                  )
+              food_layer = '<g aria-hidden="true">' + "".join(squares) + '</g>'
+
+              s = s.replace("</desc>", "</desc>" + css + glyph_layer, 1)
+              marker = '<rect class="u u0"'
+              s = s.replace(marker, food_layer + marker, 1)
               path.write_text(s)
           PY
 
