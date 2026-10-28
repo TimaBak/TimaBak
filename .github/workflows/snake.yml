@@ -106,14 +106,18 @@ jobs:
                 stroke-width:.55;
                 filter:drop-shadow(0 0 2px rgba(44,255,136,.8));
               }
-              .snake-seg{
-                rx:3px;ry:3px;
-                filter:drop-shadow(0 0 2.5px rgba(44,255,136,.75));
-              }
+              @keyframes tail1{0%,100%{transform:translateY(-1px)}50%{transform:translateY(3px)}}
+              @keyframes tail2{0%,100%{transform:translateY(2px)}50%{transform:translateY(-3px)}}
+              @keyframes tail3{0%,100%{transform:translateY(-3px)}50%{transform:translateY(2px)}}
+              @keyframes headPulse{0%,100%{filter:drop-shadow(0 0 2px rgba(44,255,136,.8))}50%{filter:drop-shadow(0 0 5px rgba(44,255,136,1))}}
               .snake-head{
                 stroke:#eafff0;
                 stroke-width:.7;
+                animation:headPulse 1.2s ease-in-out infinite;
               }
+              .tail-1{animation:tail1 .62s ease-in-out infinite}
+              .tail-2{animation:tail2 .54s ease-in-out infinite}
+              .tail-3{animation:tail3 .7s ease-in-out infinite}
               </style>
               """
 
@@ -147,17 +151,28 @@ jobs:
                       '}'
                   )
 
-                  # Six segments per snake. They use staggered positive delay to trail the head.
+                  # Comet/tadpole sprite: bright oval head + tapered wiggling tail.
                   game_parts.append(f'<g class="snake-{name}">')
-                  for seg in range(6):
-                      xoff = -seg*10
-                      size = 13 if seg == 0 else max(7, 12-seg)
-                      opacity = max(.38, 1-seg*.1)
-                      cls = "snake-seg snake-head" if seg == 0 else "snake-seg"
-                      game_parts.append(
-                          f'<rect class="{cls}" x="{xoff}" y="0" width="{size}" height="{size}" '
-                          f'fill="{snake_color[name]}" opacity="{opacity}"/>'
-                      )
+                  game_parts.append(
+                      f'<ellipse class="snake-head" cx="7" cy="7" rx="7.5" ry="5.5" '
+                      f'fill="{snake_color[name]}"/>'
+                  )
+                  game_parts.append(
+                      f'<ellipse class="tail-1" cx="-3" cy="7" rx="5.4" ry="3.6" '
+                      f'fill="{snake_color[name]}" opacity=".82"/>'
+                  )
+                  game_parts.append(
+                      f'<ellipse class="tail-2" cx="-11" cy="7" rx="4.2" ry="2.7" '
+                      f'fill="{snake_color[name]}" opacity=".62"/>'
+                  )
+                  game_parts.append(
+                      f'<ellipse class="tail-3" cx="-18" cy="7" rx="3.0" ry="2.0" '
+                      f'fill="{snake_color[name]}" opacity=".42"/>'
+                  )
+                  game_parts.append(
+                      f'<ellipse class="tail-2" cx="-24" cy="7" rx="2.1" ry="1.4" '
+                      f'fill="{snake_color[name]}" opacity=".25"/>'
+                  )
                   game_parts.append('</g>')
 
                   # Food is synchronized to the same route/phase. It stays visible until eaten.
@@ -201,9 +216,9 @@ jobs:
           dark = Path("dist/github-contribution-grid-snake-dark.svg")
           light = Path("dist/github-contribution-grid-snake.svg")
           if dark.exists():
-              Path("dist/github-matrix-game-v3.svg").write_text(dark.read_text())
+              Path("dist/github-matrix-game-v4.svg").write_text(dark.read_text())
           if light.exists():
-              Path("dist/github-matrix-game-v3-light.svg").write_text(light.read_text())
+              Path("dist/github-matrix-game-v4-light.svg").write_text(light.read_text())
           PY
 
       - name: Publish game branch
