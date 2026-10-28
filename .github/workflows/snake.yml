@@ -8,6 +8,7 @@ on:
     branches:
       - main
     paths-ignore:
+      - "README.md"
       - "README.en.md"
 
 permissions:
@@ -31,7 +32,7 @@ jobs:
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=%232cff88
 
-      - name: Build Matrix live world
+      - name: Build Matrix world v7
         run: |
           python - <<'PY'
           from pathlib import Path
@@ -40,25 +41,49 @@ jobs:
           durations = {"a":29.0, "b":31.0, "c":37.0}
           phase = {"a":0.0, "b":-10.7, "c":-23.4}
           colors = {"a":"#2cff88", "b":"#63ff9d", "c":"#b2ffcb"}
-          food_colors = ["#2cff88","#32a8ff","#ff4d67","#66ffd1","#7c6cff","#2cff88","#32a8ff"]
+          food_colors = ["#2cff88","#32a8ff","#ff4d67","#66ffd1","#8b6cff","#ffd166"]
 
           routes = {
-            "a":[(18,2),(210,2),(402,2),(594,2),(818,2),(818,34),(754,34),(818,66),(818,98),(610,98),(418,98),(226,98),(18,98),(18,66),(82,66),(18,34),(18,2)],
-            "b":[(818,82),(690,82),(562,82),(434,82),(306,82),(178,82),(18,82),(18,50),(114,50),(18,18),(178,18),(338,18),(498,18),(658,18),(818,18),(818,50),(722,50),(818,82)],
-            "c":[(98,98),(98,34),(210,34),(210,82),(322,82),(322,18),(434,18),(434,66),(546,66),(546,98),(658,98),(658,34),(770,34),(770,82),(642,82),(642,18),(514,18),(514,50),(386,50),(386,98),(258,98),(258,50),(130,50),(130,98),(98,98)]
+            "a":[
+              (18,2),(146,2),(274,2),(402,2),(530,2),(658,2),(818,2),
+              (818,34),(754,34),(818,66),(818,98),
+              (674,98),(530,98),(386,98),(242,98),(98,98),(18,98),
+              (18,66),(82,66),(18,34),(18,2)
+            ],
+            "b":[
+              (818,82),(690,82),(562,82),(434,82),(306,82),(178,82),(18,82),
+              (18,50),(114,50),(18,18),(178,18),(306,18),(434,18),(562,18),(690,18),(818,18),
+              (818,50),(722,50),(818,82)
+            ],
+            "c":[
+              (98,98),(98,34),(210,34),(210,82),(322,82),(322,18),
+              (434,18),(434,66),(546,66),(546,98),(658,98),(658,34),
+              (770,34),(770,82),(642,82),(642,18),(514,18),(514,50),
+              (386,50),(386,98),(258,98),(258,50),(130,50),(130,98),(98,98)
+            ]
           }
 
-          # Vehicle interval uses route indices. The route spends less time in these segments = actual acceleration.
-          vehicle = {
-            "a":{"type":"bike","start":3,"end":7},
-            "b":{"type":"car","start":9,"end":13},
-            "c":{"type":"bike","start":12,"end":16},
+          # Multiple rare pickups. period/slot means the pickup only exists on selected laps.
+          vehicle_events = {
+            "a":[
+              {"type":"bike","start":3,"end":7,"period":2,"slot":0,"lead":10},
+              {"type":"bike","start":12,"end":16,"period":3,"slot":1,"lead":13},
+            ],
+            "b":[
+              {"type":"car","start":9,"end":13,"period":3,"slot":2,"lead":12},
+              {"type":"bike","start":2,"end":5,"period":2,"slot":1,"lead":9},
+            ],
+            "c":[
+              {"type":"bike","start":5,"end":8,"period":2,"slot":0,"lead":11},
+              {"type":"bike","start":13,"end":17,"period":3,"slot":2,"lead":14},
+            ]
           }
 
-          food_plan = {
-            "a":[(1,0),(2,0),(3,7),(5,0),(6,18),(8,0),(9,31),(10,0),(11,47),(12,0),(13,63),(14,76),(15,0)],
-            "b":[(1,0),(2,6),(3,0),(4,17),(5,0),(6,0),(7,32),(8,0),(9,45),(10,0),(11,58),(12,0),(13,73),(14,84)],
-            "c":[(1,0),(2,4),(3,0),(4,12),(5,0),(6,21),(7,0),(8,33),(9,0),(10,44),(11,0),(12,56),(13,0),(14,67),(15,0),(16,74),(17,0),(18,82),(19,0),(20,88),(21,0),(22,93)]
+          # Rare boost gates: visual surprise without pausing movement.
+          gate_events = {
+            "a":[{"idx":9,"period":3,"slot":2}],
+            "b":[{"idx":15,"period":2,"slot":0}],
+            "c":[{"idx":19,"period":3,"slot":1}],
           }
 
           matrix_columns = [
@@ -71,49 +96,66 @@ jobs:
             (752,-132,"ｱｶｻﾀﾅﾊﾏﾔﾗﾜ10100110BAK",3.0),(814,-54,"ｲｷｼﾁﾆﾋﾐﾘ01011100SYS",1.0)
           ]
 
+          def boosted_segments(name):
+              boosted=set()
+              for ev in vehicle_events[name]:
+                  for i in range(ev["start"],ev["end"]):
+                      boosted.add(i)
+              return boosted
+
           def route_meta(name, points):
-              weighted = []
-              angles = []
+              boosted=boosted_segments(name)
+              weighted=[]; angles=[]
+              wobble=[1.0,.94,1.06,.9,1.1,.97,1.04]
               for i in range(len(points)-1):
-                  x1,y1 = points[i]; x2,y2 = points[i+1]
-                  length = hypot(x2-x1, y2-y1)
-                  angle = degrees(atan2(y2-y1, x2-x1))
-                  angles.append(angle)
-                  # vehicle segments get ~1.7x speed (less time per distance)
-                  boost = .58 if vehicle[name]["start"] <= i < vehicle[name]["end"] else 1.0
-                  # tiny deterministic variation keeps movement organic without pauses
-                  wobble = [1.0,.92,1.08,.96,1.04][i % 5]
-                  weighted.append(length * boost * wobble)
-              denom = sum(weighted)
-              pct=[0.0]; acc=0.0
+                  x1,y1=points[i]; x2,y2=points[i+1]
+                  dx=x2-x1; dy=y2-y1
+                  angles.append(degrees(atan2(dy,dx)))
+                  speed=.63 if i in boosted else 1.0
+                  weighted.append(hypot(dx,dy)*speed*wobble[i % len(wobble)])
+              total=sum(weighted); acc=0.0; pct=[0.0]
               for w in weighted:
-                  acc += w
-                  pct.append(acc/denom*100)
-              return pct, angles
+                  acc+=w
+                  pct.append(acc/total*100)
+              return pct,angles
+
+          def abs_pct(local_pct, period, slot):
+              return ((slot + local_pct/100.0)/period)*100.0
+
+          def window_keyframes(start_local,end_local,period,slot,visible=True):
+              start=abs_pct(start_local,period,slot)
+              end=abs_pct(end_local,period,slot)
+              pre=max(0,start-.18); post=min(100,end+.18)
+              if visible:
+                  return f'0%,{pre:.3f}%{{opacity:0}}{start:.3f}%,{end:.3f}%{{opacity:1}}{post:.3f}%,100%{{opacity:0}}'
+              return f'0%,{pre:.3f}%{{opacity:1}}{start:.3f}%,{end:.3f}%{{opacity:0}}{post:.3f}%,100%{{opacity:1}}'
 
           for path in Path("dist").glob("*.svg"):
-              s = path.read_text()
-              s = s.replace("width:12px;height:12px", "width:14px;height:14px")
+              s=path.read_text()
+              s=s.replace("width:12px;height:12px","width:14px;height:14px")
               if "dark" in path.name:
-                  s = s.replace("--ce:#161b22", "--ce:#08140d").replace("--c0:#161b22", "--c0:#08140d")
+                  s=s.replace("--ce:#161b22","--ce:#07120c").replace("--c0:#161b22","--c0:#07120c")
 
-              base_css = """
-              <style id="matrix-world-style">
+              base_css="""
+              <style id="matrix-world-v7-style">
               .u,.s{display:none!important}
-              @keyframes matrixRain{0%{transform:translateY(-120px);opacity:0}8%{opacity:.34}78%{opacity:.2}100%{transform:translateY(320px);opacity:0}}
-              .matrix-code{fill:#2cff88;font-family:"MS Gothic","Yu Gothic","Noto Sans JP","Arial Unicode MS",monospace;font-size:10.5px;font-weight:700;letter-spacing:1px;filter:drop-shadow(0 0 2.6px rgba(44,255,136,.58));animation:matrixRain 8.2s linear infinite}
-              .game-food{stroke:#d8ffe5;stroke-width:.55;filter:drop-shadow(0 0 3px currentColor)}
-              @keyframes tail1{0%,100%{transform:translateY(-1px) rotate(-5deg)}50%{transform:translateY(3px) rotate(8deg)}}
-              @keyframes tail2{0%,100%{transform:translateY(2px) rotate(7deg)}50%{transform:translateY(-3px) rotate(-9deg)}}
-              @keyframes tail3{0%,100%{transform:translateY(-3px) rotate(-8deg)}50%{transform:translateY(2px) rotate(10deg)}}
+              @keyframes matrixRain{0%{transform:translateY(-130px);opacity:0}8%{opacity:.38}76%{opacity:.22}100%{transform:translateY(330px);opacity:0}}
+              .matrix-code{fill:#2cff88;font-family:"MS Gothic","Yu Gothic","Noto Sans JP","Arial Unicode MS",monospace;font-size:10.5px;font-weight:700;letter-spacing:1px;filter:drop-shadow(0 0 2.8px rgba(44,255,136,.62));animation:matrixRain 8.1s linear infinite}
+              .game-food{stroke:#e5ffed;stroke-width:.55;filter:drop-shadow(0 0 3px currentColor)}
+              @keyframes tail1{0%,100%{transform:translateY(-1px) rotate(-6deg)}50%{transform:translateY(3px) rotate(9deg)}}
+              @keyframes tail2{0%,100%{transform:translateY(2px) rotate(8deg)}50%{transform:translateY(-3px) rotate(-10deg)}}
+              @keyframes tail3{0%,100%{transform:translateY(-3px) rotate(-9deg)}50%{transform:translateY(2px) rotate(11deg)}}
               @keyframes headPulse{0%,100%{filter:drop-shadow(0 0 2px rgba(44,255,136,.8))}50%{filter:drop-shadow(0 0 6px rgba(44,255,136,1))}}
-              @keyframes boostTrail{0%,100%{opacity:.18;transform:scaleX(.65)}50%{opacity:.9;transform:scaleX(1.25)}}
-              .snake-head{stroke:#edfff3;stroke-width:.7;animation:headPulse 1.1s ease-in-out infinite}
-              .tail-1{animation:tail1 .58s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
-              .tail-2{animation:tail2 .49s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
-              .tail-3{animation:tail3 .67s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
-              .boost-line{animation:boostTrail .22s linear infinite;transform-box:fill-box;transform-origin:right center}
-              .parked{filter:drop-shadow(0 0 3px rgba(44,255,136,.9))}
+              @keyframes boostTrail{0%,100%{opacity:.16;transform:scaleX(.6)}50%{opacity:.95;transform:scaleX(1.3)}}
+              @keyframes eatFlash{0%,70%{opacity:0;transform:scale(.3)}78%{opacity:.95;transform:scale(1.35)}100%{opacity:0;transform:scale(2.2)}}
+              @keyframes pickupSpark{0%,65%{opacity:0;transform:scale(.4)}75%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1.9)}}
+              .snake-head{stroke:#edfff3;stroke-width:.7;animation:headPulse 1.05s ease-in-out infinite}
+              .tail-1{animation:tail1 .56s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+              .tail-2{animation:tail2 .47s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+              .tail-3{animation:tail3 .65s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+              .boost-line{animation:boostTrail .2s linear infinite;transform-box:fill-box;transform-origin:right center}
+              .parked{filter:drop-shadow(0 0 3px rgba(44,255,136,.95))}
+              .gate{filter:drop-shadow(0 0 4px currentColor)}
               </style>
               """
 
@@ -123,71 +165,101 @@ jobs:
                   glyphs.append(f'<text class="matrix-code" x="{x}" y="{y}" style="animation-delay:-{delay}s">{spans}</text>')
               glyphs.append('</g>')
 
-              css=[]; game=['<g id="matrix-live-world" aria-hidden="true">']
+              css=[]; world=['<g id="matrix-live-world-v7" aria-hidden="true">']
 
               for name,points in routes.items():
-                  pct,angles = route_meta(name,points)
+                  pct,angles=route_meta(name,points)
                   frames=[]
                   for i,(x,y) in enumerate(points):
-                      ang = angles[i] if i < len(angles) else angles[-1]
+                      ang=angles[i] if i<len(angles) else angles[-1]
                       frames.append(f'{pct[i]:.3f}%{{transform:translate({x}px,{y}px) rotate({ang:.1f}deg)}}')
                   css.append(f'@keyframes snake_{name}'+'{'+''.join(frames)+'}')
                   css.append(f'.snake-{name}'+'{'+f'animation:snake_{name} {durations[name]}s linear infinite;animation-delay:{phase[name]}s;transform-origin:7px 7px'+'}')
 
-                  vs=vehicle[name]["start"]; ve=vehicle[name]["end"]
-                  start=pct[vs]; end=pct[ve]
-                  pre=max(0,start-.25); post=min(100,end+.25)
+                  # base swimmer always exists; vehicles are overlays, so pickups can be independently rare.
+                  world.append(f'<g class="snake-{name}">')
+                  world.append(f'<ellipse class="snake-head" cx="7" cy="7" rx="7.8" ry="5.7" fill="{colors[name]}"/>')
+                  world.append(f'<ellipse class="tail-1" cx="-3" cy="7" rx="5.5" ry="3.5" fill="{colors[name]}" opacity=".84"/><ellipse class="tail-2" cx="-11" cy="7" rx="4.3" ry="2.7" fill="{colors[name]}" opacity=".64"/><ellipse class="tail-3" cx="-18" cy="7" rx="3.1" ry="2" fill="{colors[name]}" opacity=".44"/><ellipse class="tail-2" cx="-24" cy="7" rx="2.1" ry="1.35" fill="{colors[name]}" opacity=".25"/>')
 
-                  # swimmer/vehicle state on moving actor
-                  css.append(f'@keyframes body_{name}'+'{'+f'0%,{pre:.3f}%{{opacity:1}}{start:.3f}%,{end:.3f}%{{opacity:0}}{post:.3f}%,100%{{opacity:1}}'+'}')
-                  css.append(f'@keyframes ride_{name}'+'{'+f'0%,{pre:.3f}%{{opacity:0}}{start:.3f}%,{end:.3f}%{{opacity:1}}{post:.3f}%,100%{{opacity:0}}'+'}')
-                  css.append(f'@keyframes parked_{name}'+'{'+f'0%,{pre:.3f}%{{opacity:1}}{start:.3f}%,99.75%{{opacity:0}}100%{{opacity:1}}'+'}')
+                  for eidx,ev in enumerate(vehicle_events[name],1):
+                      start=pct[ev["start"]]; end=pct[ev["end"]]
+                      period=ev["period"]; slot=ev["slot"]; superdur=durations[name]*period
+                      move_anim=f'ride_{name}_{eidx}'
+                      css.append(f'@keyframes {move_anim}'+'{'+window_keyframes(start,end,period,slot,True)+'}')
 
-                  # parked vehicle at pickup point
-                  px,py=points[vs]
-                  parked_cls=f'parked parked-{name}'
-                  css.append(f'.parked-{name}'+'{'+f'animation:parked_{name} {durations[name]}s steps(1,end) infinite;animation-delay:{phase[name]}s'+'}')
-                  if vehicle[name]["type"]=="bike":
-                      game.append(f'<g class="{parked_cls}" transform="translate({px} {py})"><circle cx="2" cy="10" r="3" fill="none" stroke="#2cff88" stroke-width="1.5"/><circle cx="14" cy="10" r="3" fill="none" stroke="#2cff88" stroke-width="1.5"/><path d="M2 10L7 5L10 10H14M7 5H12" fill="none" stroke="#baffd1" stroke-width="1.4"/></g>')
-                  else:
-                      game.append(f'<g class="{parked_cls}" transform="translate({px} {py})"><rect x="1" y="4" width="17" height="8" rx="2" fill="#32a8ff" stroke="#d9f1ff" stroke-width=".7"/><path d="M5 4L8 1H13L16 4" fill="none" stroke="#d9f1ff" stroke-width="1"/><circle cx="5" cy="13" r="2.2" fill="#07100a" stroke="#d9f1ff"/><circle cx="15" cy="13" r="2.2" fill="#07100a" stroke="#d9f1ff"/></g>')
+                      # parked vehicle appears shortly before pickup, then vanishes exactly at pickup.
+                      pickup_abs=abs_pct(start,period,slot)
+                      lead_abs=(ev["lead"]/period)
+                      spawn=max(0,pickup_abs-lead_abs)
+                      parked_anim=f'parked_{name}_{eidx}'
+                      css.append(f'@keyframes {parked_anim}'+'{'+f'0%,{max(0,spawn-.15):.3f}%{{opacity:0}}{spawn:.3f}%,{max(spawn,pickup_abs-.12):.3f}%{{opacity:1}}{pickup_abs:.3f}%,100%{{opacity:0}}'+'}')
 
-                  game.append(f'<g class="snake-{name}">')
-                  game.append(f'<g style="animation:body_{name} {durations[name]}s steps(1,end) infinite;animation-delay:{phase[name]}s">')
-                  game.append(f'<ellipse class="snake-head" cx="7" cy="7" rx="7.8" ry="5.7" fill="{colors[name]}"/>')
-                  game.append(f'<ellipse class="tail-1" cx="-3" cy="7" rx="5.5" ry="3.5" fill="{colors[name]}" opacity=".84"/><ellipse class="tail-2" cx="-11" cy="7" rx="4.3" ry="2.7" fill="{colors[name]}" opacity=".64"/><ellipse class="tail-3" cx="-18" cy="7" rx="3.1" ry="2" fill="{colors[name]}" opacity=".44"/><ellipse class="tail-2" cx="-24" cy="7" rx="2.1" ry="1.35" fill="{colors[name]}" opacity=".25"/>')
-                  game.append('</g>')
-
-                  game.append(f'<g style="animation:ride_{name} {durations[name]}s steps(1,end) infinite;animation-delay:{phase[name]}s">')
-                  if vehicle[name]["type"]=="bike":
-                      game.append('<circle cx="0" cy="11" r="3.1" fill="none" stroke="#eafff0" stroke-width="1.4"/><circle cx="15" cy="11" r="3.1" fill="none" stroke="#eafff0" stroke-width="1.4"/><path d="M0 11L6 5L10 11H15M6 5H12" fill="none" stroke="#2cff88" stroke-width="1.7"/><ellipse cx="8" cy="2.8" rx="3.8" ry="2.5" fill="'+colors[name]+'"/><path class="boost-line" d="M-4 5H-18M-5 9H-24M-3 13H-16" stroke="#2cff88" stroke-width="1.5" stroke-linecap="round"/>')
-                  else:
-                      game.append('<rect x="-2" y="4" width="22" height="9" rx="2.5" fill="#32a8ff" stroke="#d9f1ff" stroke-width=".8"/><path d="M3 4L7 0H14L18 4" fill="#0b2335" stroke="#d9f1ff" stroke-width=".8"/><circle cx="3" cy="14" r="2.4" fill="#07100a" stroke="#d9f1ff"/><circle cx="16" cy="14" r="2.4" fill="#07100a" stroke="#d9f1ff"/><ellipse cx="10" cy="2" rx="3.3" ry="2.2" fill="'+colors[name]+'"/><path class="boost-line" d="M-5 6H-20M-6 10H-26" stroke="#32a8ff" stroke-width="1.7" stroke-linecap="round"/>')
-                  game.append('</g></g>')
-
-                  # every food square is exactly on the route and disappears only at crossing
-                  for n,(route_idx,spawn) in enumerate(food_plan[name],1):
-                      route_idx=min(route_idx,len(points)-2)
-                      x,y=points[route_idx]; eat=pct[route_idx]
-                      if spawn>=eat: spawn=max(0,eat-7)
-                      anim=f'food_{name}_{n}'
-                      if spawn<=0:
-                          kf=f'0%,{max(0,eat-.6):.3f}%{{opacity:1;transform:scale(1)}}{max(0,eat-.18):.3f}%{{opacity:1;transform:scale(1.22)}}{eat:.3f}%,99.75%{{opacity:0;transform:scale(.3)}}100%{{opacity:1;transform:scale(1)}}'
+                      px,py=points[ev["start"]]
+                      parked_style=f'animation:{parked_anim} {superdur}s steps(1,end) infinite;animation-delay:{phase[name]}s'
+                      if ev["type"]=="bike":
+                          world.append(f'<g class="parked" transform="translate({px} {py})" style="{parked_style}"><circle cx="2" cy="10" r="3" fill="none" stroke="#2cff88" stroke-width="1.5"/><circle cx="14" cy="10" r="3" fill="none" stroke="#2cff88" stroke-width="1.5"/><path d="M2 10L7 5L10 10H14M7 5H12" fill="none" stroke="#d9ffe5" stroke-width="1.4"/></g>')
                       else:
-                          kf=f'0%,{max(0,spawn-.2):.3f}%{{opacity:0;transform:scale(.4)}}{spawn:.3f}%,{max(spawn,eat-.6):.3f}%{{opacity:1;transform:scale(1)}}{max(spawn,eat-.18):.3f}%{{opacity:1;transform:scale(1.22)}}{eat:.3f}%,100%{{opacity:0;transform:scale(.3)}}'
+                          world.append(f'<g class="parked" transform="translate({px} {py})" style="{parked_style}"><rect x="1" y="4" width="17" height="8" rx="2" fill="#32a8ff" stroke="#d9f1ff" stroke-width=".7"/><path d="M5 4L8 1H13L16 4" fill="none" stroke="#d9f1ff"/><circle cx="5" cy="13" r="2.2" fill="#07100a" stroke="#d9f1ff"/><circle cx="15" cy="13" r="2.2" fill="#07100a" stroke="#d9f1ff"/></g>')
+
+                      # pickup spark at world coordinate.
+                      spark_anim=f'spark_{name}_{eidx}'
+                      spark_start=max(0,pickup_abs-.5); spark_end=min(100,pickup_abs+.55)
+                      css.append(f'@keyframes {spark_anim}'+'{'+f'0%,{spark_start:.3f}%{{opacity:0;transform:scale(.3)}}{pickup_abs:.3f}%{{opacity:1;transform:scale(1)}}{spark_end:.3f}%,100%{{opacity:0;transform:scale(2)}}'+'}')
+                      world.append(f'<circle cx="{px+7}" cy="{py+7}" r="6" fill="none" stroke="#dffff0" stroke-width="1.2" style="transform-box:fill-box;transform-origin:center;animation:{spark_anim} {superdur}s linear infinite;animation-delay:{phase[name]}s"/>')
+
+                      # moving vehicle rides on top of the swimmer.
+                      ride_style=f'animation:{move_anim} {superdur}s steps(1,end) infinite;animation-delay:{phase[name]}s'
+                      if ev["type"]=="bike":
+                          world.append(f'<g style="{ride_style}"><circle cx="0" cy="11" r="3.1" fill="none" stroke="#eafff0" stroke-width="1.4"/><circle cx="15" cy="11" r="3.1" fill="none" stroke="#eafff0" stroke-width="1.4"/><path d="M0 11L6 5L10 11H15M6 5H12" fill="none" stroke="#2cff88" stroke-width="1.7"/><ellipse cx="8" cy="2.8" rx="3.8" ry="2.5" fill="{colors[name]}"/><path class="boost-line" d="M-4 5H-18M-5 9H-24M-3 13H-16" stroke="#2cff88" stroke-width="1.5" stroke-linecap="round"/></g>')
+                      else:
+                          world.append(f'<g style="{ride_style}"><rect x="-2" y="4" width="22" height="9" rx="2.5" fill="#32a8ff" stroke="#d9f1ff" stroke-width=".8"/><path d="M3 4L7 0H14L18 4" fill="#0b2335" stroke="#d9f1ff" stroke-width=".8"/><circle cx="3" cy="14" r="2.4" fill="#07100a" stroke="#d9f1ff"/><circle cx="16" cy="14" r="2.4" fill="#07100a" stroke="#d9f1ff"/><ellipse cx="10" cy="2" rx="3.3" ry="2.2" fill="{colors[name]}"/><path class="boost-line" d="M-5 6H-20M-6 10H-26" stroke="#32a8ff" stroke-width="1.7" stroke-linecap="round"/></g>')
+
+                  world.append('</g>')
+
+                  # Food schedule: mix of every-lap, every-second-lap and every-third-lap squares.
+                  usable=list(range(1,len(points)-1))
+                  for n,route_idx in enumerate(usable,1):
+                      x,y=points[route_idx]; eat=pct[route_idx]
+                      period=[1,2,3,1,2,1,3][n % 7]
+                      slot=(n*2 + (0 if name=="a" else 1 if name=="b" else 2)) % period
+                      lead=[7,11,15,9,18][n % 5]
+                      spawn_local=max(0,eat-lead)
+                      superdur=durations[name]*period
+                      eat_abs=abs_pct(eat,period,slot)
+                      spawn_abs=abs_pct(spawn_local,period,slot)
+                      anim=f'food_{name}_{n}'
+                      if spawn_local<=0 and slot==0:
+                          kf=f'0%,{max(0,eat_abs-.22):.3f}%{{opacity:1;transform:scale(1)}}{eat_abs:.3f}%,99.8%{{opacity:0;transform:scale(.25)}}100%{{opacity:1;transform:scale(1)}}'
+                      else:
+                          kf=f'0%,{max(0,spawn_abs-.12):.3f}%{{opacity:0;transform:scale(.35)}}{spawn_abs:.3f}%,{max(spawn_abs,eat_abs-.22):.3f}%{{opacity:1;transform:scale(1)}}{eat_abs:.3f}%,100%{{opacity:0;transform:scale(.25)}}'
                       css.append(f'@keyframes {anim}'+'{'+kf+'}')
                       fc=food_colors[(n + (0 if name=="a" else 2 if name=="b" else 4)) % len(food_colors)]
-                      game.append(f'<rect class="game-food" x="{x}" y="{y}" width="12" height="12" rx="2" ry="2" fill="{fc}" style="color:{fc};transform-box:fill-box;transform-origin:center;animation:{anim} {durations[name]}s steps(1,end) infinite;animation-delay:{phase[name]}s"/>')
+                      world.append(f'<rect class="game-food" x="{x}" y="{y}" width="12" height="12" rx="2" ry="2" fill="{fc}" style="color:{fc};transform-box:fill-box;transform-origin:center;animation:{anim} {superdur}s steps(1,end) infinite;animation-delay:{phase[name]}s"/>')
 
-              game.append('</g>')
-              s=s.replace("</desc>","</desc>"+base_css+'<style id="matrix-world-animations">'+''.join(css)+'</style>'+''.join(glyphs),1)
-              s=s.replace('<rect class="u u0"',''.join(game)+'<rect class="u u0"',1)
+                      # small consumption flash, synchronized with the exact eating instant.
+                      flash=f'flash_{name}_{n}'
+                      fs=max(0,eat_abs-.35); fe=min(100,eat_abs+.5)
+                      css.append(f'@keyframes {flash}'+'{'+f'0%,{fs:.3f}%{{opacity:0;transform:scale(.3)}}{eat_abs:.3f}%{{opacity:.9;transform:scale(1)}}{fe:.3f}%,100%{{opacity:0;transform:scale(2)}}'+'}')
+                      world.append(f'<circle cx="{x+6}" cy="{y+6}" r="5" fill="none" stroke="{fc}" stroke-width="1" style="transform-box:fill-box;transform-origin:center;animation:{flash} {superdur}s linear infinite;animation-delay:{phase[name]}s"/>')
+
+                  # Rare gates.
+                  for gidx,ev in enumerate(gate_events[name],1):
+                      idx=min(ev["idx"],len(points)-2); x,y=points[idx]; local=pct[idx]
+                      period=ev["period"]; slot=ev["slot"]; superdur=durations[name]*period
+                      center=abs_pct(local,period,slot); gs=max(0,center-1.1); ge=min(100,center+1.1)
+                      anim=f'gate_{name}_{gidx}'
+                      css.append(f'@keyframes {anim}'+'{'+f'0%,{gs:.3f}%{{opacity:0;transform:scale(.7)}}{center:.3f}%{{opacity:1;transform:scale(1.15)}}{ge:.3f}%,100%{{opacity:0;transform:scale(1.4)}}'+'}')
+                      world.append(f'<g class="gate" transform="translate({x} {y})" style="color:#32a8ff;transform-box:fill-box;transform-origin:center;animation:{anim} {superdur}s ease-out infinite;animation-delay:{phase[name]}s"><path d="M-2 -5V19M16 -5V19" stroke="#32a8ff" stroke-width="1.4"/><path d="M1 -2V16M13 -2V16" stroke="#2cff88" stroke-width=".8" opacity=".8"/></g>')
+
+              world.append('</g>')
+              s=s.replace("</desc>","</desc>"+base_css+'<style id="matrix-world-v7-animations">'+''.join(css)+'</style>'+''.join(glyphs),1)
+              s=s.replace('<rect class="u u0"',''.join(world)+'<rect class="u u0"',1)
               path.write_text(s)
 
           dark=Path("dist/github-contribution-grid-snake-dark.svg")
           light=Path("dist/github-contribution-grid-snake.svg")
-          if dark.exists(): Path("dist/github-matrix-world-v6.svg").write_text(dark.read_text())
-          if light.exists(): Path("dist/github-matrix-world-v6-light.svg").write_text(light.read_text())
+          if dark.exists(): Path("dist/github-matrix-world-v7.svg").write_text(dark.read_text())
+          if light.exists(): Path("dist/github-matrix-world-v7-light.svg").write_text(light.read_text())
           PY
 
       - name: Publish Matrix world
