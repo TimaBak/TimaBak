@@ -196,6 +196,14 @@ jobs:
               marker = '<rect class="u u0"'
               s = s.replace(marker, game_layer + marker, 1)
               path.write_text(s)
+
+          # Versioned aliases force GitHub's image proxy to fetch a fresh asset.
+          dark = Path("dist/github-contribution-grid-snake-dark.svg")
+          light = Path("dist/github-contribution-grid-snake.svg")
+          if dark.exists():
+              Path("dist/github-matrix-game-v3.svg").write_text(dark.read_text())
+          if light.exists():
+              Path("dist/github-matrix-game-v3-light.svg").write_text(light.read_text())
           PY
 
       - name: Publish game branch
