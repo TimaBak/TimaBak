@@ -1,13 +1,17 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/TimaBak/TimaBak/main/assets/hero.svg" width="100%" alt="TimaBak — digital systems builder" />
+<p align="right">
+  <strong>English</strong> · <a href="./README.ru.md">Русский</a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/Bakunity"><img src="https://raw.githubusercontent.com/TimaBak/TimaBak/main/assets/nav-bakunity.svg" width="18.5%" alt="Bakunity" /></a>
-  <a href="https://tima.biz"><img src="https://raw.githubusercontent.com/TimaBak/TimaBak/main/assets/nav-tima.svg" width="18.5%" alt="tima.biz" /></a>
-  <a href="https://bakvpn.me"><img src="https://raw.githubusercontent.com/TimaBak/TimaBak/main/assets/nav-vpn.svg" width="18.5%" alt="Bak VPN" /></a>
-  <a href="https://osved.tima.biz"><img src="https://raw.githubusercontent.com/TimaBak/TimaBak/main/assets/nav-osved.svg" width="18.5%" alt="OSVED" /></a>
-  <a href="https://github.com/TimaBak?tab=repositories"><img src="https://raw.githubusercontent.com/TimaBak/TimaBak/main/assets/nav-github.svg" width="18.5%" alt="GitHub" /></a>
+  <img src="./assets/hero.svg" width="100%" alt="TimaBak profile" />
+</p>
+
+<p align="center">
+  <a href="https://github.com/Bakunity"><img src="./assets/nav-bakunity.svg" width="18.5%" alt="Bakunity" /></a>
+  <a href="https://tima.biz"><img src="./assets/nav-tima.svg" width="18.5%" alt="tima.biz" /></a>
+  <a href="https://bakvpn.me"><img src="./assets/nav-vpn.svg" width="18.5%" alt="Bak VPN" /></a>
+  <a href="https://osved.tima.biz"><img src="./assets/nav-osved.svg" width="18.5%" alt="OSVED" /></a>
+  <a href="https://github.com/TimaBak?tab=repositories"><img src="./assets/nav-github.svg" width="18.5%" alt="GitHub" /></a>
 </p>
 
 <p align="center">
@@ -19,22 +23,22 @@
   <code>AI</code> × <code>INFRASTRUCTURE</code> × <code>AUTOMATION</code> × <code>CYBERSECURITY</code> × <code>PRODUCTS</code>
 </p>
 
-<img src="https://raw.githubusercontent.com/TimaBak/TimaBak/main/assets/system-status.svg" width="100%" alt="Current system status" />
+<img src="./assets/system-status.svg" width="100%" alt="Current system status" />
 
 ## `> map ./bakunity`
 
-<img src="https://raw.githubusercontent.com/TimaBak/TimaBak/main/assets/ecosystem.svg" width="100%" alt="Bakunity ecosystem" />
+<img src="./assets/ecosystem.svg" width="100%" alt="Bakunity ecosystem" />
 
 ## `> ls ./products --visual`
 
 <p align="center">
-  <a href="https://github.com/TimaBak/osved"><img src="https://raw.githubusercontent.com/TimaBak/TimaBak/main/assets/card-osved.svg" width="49%" alt="OSVED" /></a>
-  <a href="https://bakvpn.me"><img src="https://raw.githubusercontent.com/TimaBak/TimaBak/main/assets/card-vpn.svg" width="49%" alt="Bak VPN" /></a>
+  <a href="https://github.com/TimaBak/osved"><img src="./assets/card-osved.svg" width="49%" alt="OSVED" /></a>
+  <a href="https://bakvpn.me"><img src="./assets/card-vpn.svg" width="49%" alt="Bak VPN" /></a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/Bakunity"><img src="https://raw.githubusercontent.com/TimaBak/TimaBak/main/assets/card-bakunity.svg" width="49%" alt="Bakunity" /></a>
-  <a href="https://github.com/TimaBak/System-Architect"><img src="https://raw.githubusercontent.com/TimaBak/TimaBak/main/assets/card-infra.svg" width="49%" alt="Systems Lab" /></a>
+  <a href="https://github.com/Bakunity"><img src="./assets/card-bakunity.svg" width="49%" alt="Bakunity" /></a>
+  <a href="https://github.com/TimaBak/System-Architect"><img src="./assets/card-infra.svg" width="49%" alt="Systems Lab" /></a>
 </p>
 
 ## `> cat mission.txt`
@@ -62,19 +66,11 @@ I like products that do something useful instead of existing only as demos.
 </p>
 
 <p align="center">
-  <code>LLMs</code> ·
-  <code>AI Agents</code> ·
-  <code>GitHub Actions</code> ·
-  <code>Docker</code> ·
-  <code>Linux</code> ·
-  <code>Networking</code> ·
-  <code>Remote Systems</code> ·
-  <code>Automation</code>
+  <code>LLMs</code> · <code>AI Agents</code> · <code>GitHub Actions</code> · <code>Docker</code> ·
+  <code>Linux</code> · <code>Networking</code> · <code>Remote Systems</code> · <code>Automation</code>
 </p>
 
-<details>
-<summary><strong>⌁ open /focus</strong></summary>
-<br/>
+## `> focus`
 
 ```text
 /tima
@@ -86,39 +82,22 @@ I like products that do something useful instead of existing only as demos.
 └── learn by shipping
 ```
 
-</details>
-
-<details>
-<summary><strong>⌁ open /lab</strong></summary>
-<br/>
-
-Some of the public experiments and repositories around the system:
+## `> lab`
 
 - **[OSVED](https://github.com/TimaBak/osved)** — personal intelligence platform
 - **[System Architect](https://github.com/TimaBak/System-Architect)** — architecture and automation experiments
 - **[Ubuntu Hyper-V AI Server](https://github.com/TimaBak/Ubuntu-Hyperv-Hermes-Ai-Server)** — infrastructure experiments
 - **[Courses](https://github.com/TimaBak/Courses)** — learning and research workspace
 
-</details>
-
-## `> telemetry --github`
-
-<p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=TimaBak&show_icons=true&theme=github_dark&hide_border=true&bg_color=00000000&title_color=2cff88&icon_color=2cff88&text_color=c9d1d9&rank_icon=github" alt="TimaBak GitHub stats" />
-  <img height="165" src="https://streak-stats.demolab.com?user=TimaBak&theme=github-dark-blue&hide_border=true&background=00000000&ring=2CFF88&fire=2CFF88&currStreakLabel=2CFF88" alt="TimaBak GitHub streak" />
-</p>
+## `> github.activity`
 
 <p align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=TimaBak&bg_color=0d1117&color=2cff88&line=2cff88&point=ffffff&hide_border=true&area=true&area_color=2cff88" width="100%" alt="TimaBak activity graph" />
 </p>
 
-<details>
-<summary><strong>⌁ contribution process</strong></summary>
-<br/>
 <p align="center">
   <img src="https://raw.githubusercontent.com/TimaBak/TimaBak/output/github-contribution-grid-snake-dark.svg" width="100%" alt="Contribution snake" />
 </p>
-</details>
 
 ## `> principles`
 
@@ -141,5 +120,5 @@ Some of the public experiments and repositories around the system:
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/TimaBak/TimaBak/main/assets/footer.svg" width="100%" alt="Build ship measure improve" />
+  <img src="./assets/footer.svg" width="100%" alt="Build ship measure improve" />
 </p>
