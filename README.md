@@ -82,7 +82,7 @@
 ## `> github.matrix`
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/TimaBak/TimaBak/output/github-contribution-grid-snake-dark.svg" width="100%" alt="Матрица вкладов GitHub" />
+  <img src="https://raw.githubusercontent.com/TimaBak/TimaBak/output/github-matrix-game-v3.svg?v=3" width="100%" alt="Матрица вкладов GitHub" />
 </p>
 
 <p align="center">
