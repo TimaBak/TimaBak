@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="150" viewBox="0 0 1200 150" role="img">
+<defs><linearGradient id="l" x1="0" x2="1"><stop stop-color="#2cff88" stop-opacity="0"/><stop offset=".5" stop-color="#2cff88"/><stop offset="1" stop-color="#2cff88" stop-opacity="0"/></linearGradient><style>.m{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"DejaVu Sans Mono",monospace}.p{animation:p 2.6s ease-in-out infinite}.s{animation:s 6s linear infinite}@keyframes p{0%,100%{opacity:.3}50%{opacity:1}}@keyframes s{0%{transform:translateX(-300px);opacity:0}15%{opacity:1}85%{opacity:.7}100%{transform:translateX(1500px);opacity:0}}</style></defs>
+<rect width="1200" height="150" rx="20" fill="#040806"/><rect x="1" y="1" width="1198" height="148" rx="19" fill="none" stroke="#18462a"/><rect y="18" width="220" height="2" fill="url(#l)" class="s"/>
+<text x="600" y="61" text-anchor="middle" class="m" font-size="13" fill="#2cff88">[ НИКОГДА НЕ ГОТОВО / ВСЕГДА В РАЗВИТИИ ]</text>
+<text x="600" y="96" text-anchor="middle" class="m" font-size="22" font-weight="800" letter-spacing="3" fill="#f1fff5">СОЗДАВАТЬ → ЗАПУСКАТЬ → ИЗМЕРЯТЬ → УЛУЧШАТЬ</text>
+<circle cx="452" cy="126" r="4" fill="#2cff88" class="p"/><text x="600" y="131" text-anchor="middle" class="m" font-size="12" fill="#678471">github.com/TimaBak · экосистема Bakunity</text></svg>
