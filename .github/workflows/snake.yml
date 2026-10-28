@@ -31,6 +31,10 @@ jobs:
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=%232cff88
 
+      - name: Enlarge contribution cells
+        run: |
+          sed -i 's/width:12px;height:12px/width:14px;height:14px/g' dist/*.svg
+
       - name: Publish snake branch
         uses: peaceiris/actions-gh-pages@v4
         with:
