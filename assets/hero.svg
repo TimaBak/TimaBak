@@ -1,39 +1,79 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500" role="img" aria-labelledby="title desc">
-<title id="title">TimaBak profile</title><desc id="desc">Animated Matrix-inspired terminal header.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+<title id="title">TimaBak</title><desc id="desc">TimaBak Matrix terminal profile</desc>
 <defs>
-<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#020604"/><stop offset=".48" stop-color="#07100a"/><stop offset="1" stop-color="#010302"/></linearGradient>
-<radialGradient id="radar"><stop stop-color="#2cff88" stop-opacity=".13"/><stop offset=".6" stop-color="#2cff88" stop-opacity=".035"/><stop offset="1" stop-color="#2cff88" stop-opacity="0"/></radialGradient>
-<linearGradient id="scan" x1="0" x2="1"><stop stop-color="#2cff88" stop-opacity="0"/><stop offset=".45" stop-color="#2cff88" stop-opacity=".8"/><stop offset=".55" stop-color="#c9ffda"/><stop offset="1" stop-color="#2cff88" stop-opacity="0"/></linearGradient>
-<filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-<pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#1e5132" stroke-width="1" opacity=".12"/></pattern>
-<clipPath id="matrixClip"><rect x="720" y="42" width="430" height="416" rx="18"/></clipPath>
-<style>
-.m{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}
-.scanline{animation:scanline 7s linear infinite}.pulse{animation:pulse 2.2s ease-in-out infinite}.blink{animation:blink 1s steps(1,end) infinite}
-.m1{animation:rain 7.4s linear infinite}.m2{animation:rain 9.6s linear infinite -2s}.m3{animation:rain 6.6s linear infinite -4s}.m4{animation:rain 10.5s linear infinite -1s}.m5{animation:rain 8.2s linear infinite -5s}
-.p1{animation:p1 9s linear infinite}.p2{animation:p2 9s linear infinite}.p3{animation:p3 9s linear infinite}
-.log1{animation:l1 9s linear infinite}.log2{animation:l2 9s linear infinite}.log3{animation:l3 9s linear infinite}.dash{stroke-dasharray:8 10;animation:dash 12s linear infinite}
-@keyframes scanline{0%{transform:translateY(-18px);opacity:0}8%{opacity:.75}92%{opacity:.22}100%{transform:translateY(510px);opacity:0}}
-@keyframes pulse{0%,100%{opacity:.42}50%{opacity:1}}@keyframes blink{0%,48%{opacity:1}49%,100%{opacity:0}}
-@keyframes rain{0%{transform:translateY(-340px);opacity:0}10%{opacity:.65}90%{opacity:.42}100%{transform:translateY(520px);opacity:0}}
-@keyframes p1{0%,3%{opacity:0}6%,28%{opacity:1}31%,100%{opacity:0}}@keyframes p2{0%,34%{opacity:0}37%,59%{opacity:1}62%,100%{opacity:0}}@keyframes p3{0%,65%{opacity:0}68%,91%{opacity:1}94%,100%{opacity:0}}
-@keyframes l1{0%,5%{opacity:0}9%,76%{opacity:.82}84%,100%{opacity:0}}@keyframes l2{0%,16%{opacity:0}20%,82%{opacity:.82}90%,100%{opacity:0}}@keyframes l3{0%,28%{opacity:0}32%,88%{opacity:.82}96%,100%{opacity:0}}
-@keyframes dash{to{stroke-dashoffset:-180}}
-</style></defs>
-<rect width="1200" height="500" rx="26" fill="url(#bg)"/><ellipse cx="940" cy="250" rx="320" ry="240" fill="url(#radar)"/><rect width="1200" height="500" rx="26" fill="url(#grid)"/><rect x="1.5" y="1.5" width="1197" height="497" rx="24.5" fill="none" stroke="#28613d" stroke-opacity=".75"/><path d="M34 92H1166M700 42V458" stroke="#173a25" opacity=".8"/>
-<circle cx="64" cy="54" r="6" fill="#ff5f57"/><circle cx="86" cy="54" r="6" fill="#febc2e"/><circle cx="108" cy="54" r="6" fill="#28c840"/><text x="138" y="59" class="m" font-size="14" fill="#688775">root@bakunity://tima.profile</text><text x="930" y="59" class="m" font-size="13" fill="#2cff88">[ MATRIX://ACTIVE ]</text>
-<g clip-path="url(#matrixClip)" class="m" fill="#2cff88" font-size="13">
-<g class="m1" opacity=".25"><text x="755" y="0">0<tspan x="755" dy="20">1</tspan><tspan x="755" dy="20">B</tspan><tspan x="755" dy="20">A</tspan><tspan x="755" dy="20">K</tspan><tspan x="755" dy="20">1</tspan><tspan x="755" dy="20">0</tspan><tspan x="755" dy="20">AI</tspan><tspan x="755" dy="20">SYS</tspan><tspan x="755" dy="20">NET</tspan></text></g>
-<g class="m2" opacity=".17"><text x="820" y="-80">1<tspan x="820" dy="20">0</tspan><tspan x="820" dy="20">01</tspan><tspan x="820" dy="20">AI</tspan><tspan x="820" dy="20">BOT</tspan><tspan x="820" dy="20">SYS</tspan><tspan x="820" dy="20">0</tspan><tspan x="820" dy="20">1</tspan></text></g>
-<g class="m3" opacity=".32"><text x="895" y="-160">B<tspan x="895" dy="20">A</tspan><tspan x="895" dy="20">K</tspan><tspan x="895" dy="20">U</tspan><tspan x="895" dy="20">N</tspan><tspan x="895" dy="20">I</tspan><tspan x="895" dy="20">T</tspan><tspan x="895" dy="20">Y</tspan><tspan x="895" dy="20">01</tspan></text></g>
-<g class="m4" opacity=".18"><text x="980" y="-40">11<tspan x="980" dy="20">VPN</tspan><tspan x="980" dy="20">01</tspan><tspan x="980" dy="20">NET</tspan><tspan x="980" dy="20">AI</tspan><tspan x="980" dy="20">OPS</tspan></text></g>
-<g class="m5" opacity=".24"><text x="1070" y="-120">AI<tspan x="1070" dy="20">01</tspan><tspan x="1070" dy="20">OS</tspan><tspan x="1070" dy="20">VED</tspan><tspan x="1070" dy="20">10</tspan><tspan x="1070" dy="20">SYS</tspan></text></g>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#010302"/><stop offset=".46" stop-color="#07100a"/><stop offset="1" stop-color="#020504"/></linearGradient>
+  <radialGradient id="halo"><stop stop-color="#2cff88" stop-opacity=".18"/><stop offset=".58" stop-color="#2cff88" stop-opacity=".045"/><stop offset="1" stop-color="#2cff88" stop-opacity="0"/></radialGradient>
+  <linearGradient id="scan" x1="0" x2="1"><stop stop-color="#2cff88" stop-opacity="0"/><stop offset=".35" stop-color="#2cff88" stop-opacity=".55"/><stop offset=".5" stop-color="#d9ffe5"/><stop offset=".65" stop-color="#2cff88" stop-opacity=".55"/><stop offset="1" stop-color="#2cff88" stop-opacity="0"/></linearGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="3.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#225a36" stroke-width="1" opacity=".11"/></pattern>
+  <clipPath id="rainClip"><rect x="670" y="78" width="490" height="402" rx="18"/></clipPath>
+  <style>
+  .m{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"DejaVu Sans Mono","Liberation Mono",monospace}
+  .rain1{animation:rain 7.5s linear infinite}.rain2{animation:rain 9.8s linear infinite -2s}.rain3{animation:rain 6.8s linear infinite -4s}.rain4{animation:rain 10.4s linear infinite -1s}.rain5{animation:rain 8.7s linear infinite -5s}.rain6{animation:rain 11.3s linear infinite -6s}.rain7{animation:rain 7.9s linear infinite -3s}.rain8{animation:rain 9.2s linear infinite -7s}
+  .scan{animation:scan 6.8s linear infinite}.pulse{animation:pulse 2.1s ease-in-out infinite}.blink{animation:blink 1s steps(1,end) infinite}.dash{stroke-dasharray:7 10;animation:dash 11s linear infinite}
+  .p1{animation:p1 10.5s linear infinite}.p2{animation:p2 10.5s linear infinite}.p3{animation:p3 10.5s linear infinite}
+  @keyframes rain{0%{transform:translateY(-390px);opacity:0}8%{opacity:.7}88%{opacity:.42}100%{transform:translateY(560px);opacity:0}}
+  @keyframes scan{0%{transform:translateY(-24px);opacity:0}8%{opacity:.95}91%{opacity:.28}100%{transform:translateY(590px);opacity:0}}
+  @keyframes pulse{0%,100%{opacity:.42}50%{opacity:1}}@keyframes blink{0%,48%{opacity:1}49%,100%{opacity:0}}@keyframes dash{to{stroke-dashoffset:-170}}
+  @keyframes p1{0%,2%{opacity:0}6%,29%{opacity:1}33%,100%{opacity:0}}@keyframes p2{0%,35%{opacity:0}39%,62%{opacity:1}66%,100%{opacity:0}}@keyframes p3{0%,68%{opacity:0}72%,95%{opacity:1}98%,100%{opacity:0}}
+  </style>
+</defs>
+
+<rect width="1200" height="560" rx="28" fill="url(#bg)"/>
+<rect width="1200" height="560" rx="28" fill="url(#grid)"/>
+<ellipse cx="935" cy="275" rx="330" ry="280" fill="url(#halo)"/>
+<rect x="1.5" y="1.5" width="1197" height="557" rx="26.5" fill="none" stroke="#28613d" stroke-opacity=".78"/>
+<path d="M34 76H1166" stroke="#173a25"/>
+
+<circle cx="60" cy="42" r="6" fill="#ff5f57"/><circle cx="82" cy="42" r="6" fill="#febc2e"/><circle cx="104" cy="42" r="6" fill="#28c840"/>
+<text x="136" y="47" class="m" font-size="13" fill="#688775">tima@bakunity:~/profile</text>
+<text x="948" y="47" class="m" font-size="12" fill="#2cff88">[ PERSONAL NODE // ONLINE ]</text>
+
+<g clip-path="url(#rainClip)" class="m" fill="#2cff88" font-size="13">
+  <text x="704" y="-140" class="rain1" opacity=".28">0<tspan x="704" dy="20">1</tspan><tspan x="704" dy="20">AI</tspan><tspan x="704" dy="20">BAK</tspan><tspan x="704" dy="20">SYS</tspan><tspan x="704" dy="20">01</tspan><tspan x="704" dy="20">NET</tspan><tspan x="704" dy="20">11</tspan></text>
+  <text x="758" y="-60" class="rain2" opacity=".18">1<tspan x="758" dy="20">0</tspan><tspan x="758" dy="20">OS</tspan><tspan x="758" dy="20">VED</tspan><tspan x="758" dy="20">AI</tspan><tspan x="758" dy="20">10</tspan><tspan x="758" dy="20">BOT</tspan></text>
+  <text x="818" y="-220" class="rain3" opacity=".34">B<tspan x="818" dy="20">A</tspan><tspan x="818" dy="20">K</tspan><tspan x="818" dy="20">U</tspan><tspan x="818" dy="20">N</tspan><tspan x="818" dy="20">I</tspan><tspan x="818" dy="20">T</tspan><tspan x="818" dy="20">Y</tspan></text>
+  <text x="878" y="-100" class="rain4" opacity=".2">01<tspan x="878" dy="20">VPN</tspan><tspan x="878" dy="20">NET</tspan><tspan x="878" dy="20">AI</tspan><tspan x="878" dy="20">OPS</tspan><tspan x="878" dy="20">11</tspan></text>
+  <text x="938" y="-260" class="rain5" opacity=".3">AI<tspan x="938" dy="20">01</tspan><tspan x="938" dy="20">SYS</tspan><tspan x="938" dy="20">RDP</tspan><tspan x="938" dy="20">10</tspan><tspan x="938" dy="20">INFRA</tspan></text>
+  <text x="998" y="-80" class="rain6" opacity=".17">1<tspan x="998" dy="20">0</tspan><tspan x="998" dy="20">API</tspan><tspan x="998" dy="20">AI</tspan><tspan x="998" dy="20">DOCKER</tspan><tspan x="998" dy="20">01</tspan></text>
+  <text x="1062" y="-190" class="rain7" opacity=".26">NET<tspan x="1062" dy="20">11</tspan><tspan x="1062" dy="20">BAK</tspan><tspan x="1062" dy="20">OS</tspan><tspan x="1062" dy="20">AI</tspan><tspan x="1062" dy="20">SYS</tspan></text>
+  <text x="1122" y="-40" class="rain8" opacity=".16">01<tspan x="1122" dy="20">VPN</tspan><tspan x="1122" dy="20">AI</tspan><tspan x="1122" dy="20">NET</tspan><tspan x="1122" dy="20">10</tspan><tspan x="1122" dy="20">OPS</tspan></text>
 </g>
-<circle cx="937" cy="250" r="124" fill="none" stroke="#2cff88" stroke-opacity=".08"/><circle cx="937" cy="250" r="82" fill="none" stroke="#2cff88" stroke-opacity=".12" class="dash"/><circle cx="937" cy="250" r="4.5" fill="#2cff88" class="pulse" filter="url(#glow)"/><path d="M937 250L1080 165M937 250L1045 354M937 250L817 327M937 250L852 166" stroke="#2cff88" stroke-opacity=".18" stroke-width="1.5" class="dash"/>
-<g class="m" font-size="12" fill="#8db59a"><text x="1084" y="165">INFRA</text><text x="1048" y="370">VPN</text><text x="770" y="345">OSVED</text><text x="792" y="160">AI</text></g>
-<text x="58" y="130" class="m" font-size="15" fill="#65d98b">$ ./boot-profile --mode=build</text><text x="58" y="205" class="m" font-size="60" font-weight="800" letter-spacing="9" fill="#f2fff5">TIMA BAK</text><text x="58" y="244" class="m" font-size="17" fill="#799886">FOUNDER / BUILDER / SYSTEMS THINKER</text>
-<g class="m" font-size="20" font-weight="700" fill="#2cff88"><text x="58" y="292" class="p1">BUILDING AI × INFRASTRUCTURE × PRODUCTS</text><text x="58" y="292" class="p2">AUTOMATING BORING WORK INTO SYSTEMS</text><text x="58" y="292" class="p3">SHIPPING USEFUL THINGS ON THE INTERNET</text></g>
-<g class="m" font-size="15" fill="#b4c9ba"><text x="58" y="342" class="log1">&gt; bakunity.ecosystem ........ CONNECTED</text><text x="58" y="372" class="log2">&gt; osved.intelligence ........ BUILDING</text><text x="58" y="402" class="log3">&gt; bakvpn.network ............. LIVE</text></g>
-<g transform="translate(58 446)"><circle cx="7" cy="7" r="6.5" fill="#2cff88" class="pulse" filter="url(#glow)"/><text x="24" y="12" class="m" font-size="14" font-weight="700" fill="#2cff88">SYSTEM ONLINE</text><text x="158" y="12" class="m" font-size="14" fill="#567263">// BUILD → SHIP → ITERATE</text><rect x="394" y="-2" width="9" height="17" fill="#2cff88" class="blink"/></g>
-<rect class="scanline" x="28" y="-12" width="1144" height="2.5" fill="url(#scan)" filter="url(#glow)"/>
+
+<text x="58" y="118" class="m" font-size="14" fill="#67d98b">$ whoami --verbose</text>
+<text x="58" y="198" class="m" font-size="66" font-weight="800" letter-spacing="10" fill="#f3fff6">TIMA BAK</text>
+<rect x="58" y="218" width="540" height="1.5" fill="#2cff88" opacity=".48"/>
+<text x="58" y="252" class="m" font-size="16" fill="#789a84">FOUNDER · BUILDER · SYSTEMS THINKER</text>
+
+<g class="m" font-size="20" font-weight="700" fill="#2cff88" filter="url(#glow)">
+  <text x="58" y="310" class="p1">AI + INFRASTRUCTURE + AUTOMATION</text>
+  <text x="58" y="310" class="p2">BUILDING PRODUCTS THAT ACTUALLY WORK</text>
+  <text x="58" y="310" class="p3">IDEA → SYSTEM → REAL USERS</text>
+</g>
+
+<g class="m">
+  <rect x="58" y="350" width="540" height="122" rx="16" fill="#061009" stroke="#183f27"/>
+  <text x="80" y="380" font-size="12" fill="#5f806b">SYSTEM PATH</text>
+  <text x="80" y="414" font-size="14" fill="#c5d8ca">idea</text><text x="142" y="414" font-size="14" fill="#2cff88">→</text>
+  <text x="172" y="414" font-size="14" fill="#c5d8ca">prototype</text><text x="272" y="414" font-size="14" fill="#2cff88">→</text>
+  <text x="302" y="414" font-size="14" fill="#c5d8ca">system</text><text x="376" y="414" font-size="14" fill="#2cff88">→</text>
+  <text x="406" y="414" font-size="14" fill="#c5d8ca">users</text><text x="468" y="414" font-size="14" fill="#2cff88">→</text>
+  <text x="498" y="414" font-size="14" fill="#c5d8ca">iterate</text>
+  <text x="80" y="448" font-size="12" fill="#678471">BUILD → SHIP → MEASURE → IMPROVE</text>
+</g>
+
+<g class="m">
+  <rect x="742" y="118" width="360" height="268" rx="18" fill="#061009" fill-opacity=".86" stroke="#245d39"/>
+  <text x="770" y="150" font-size="13" fill="#5f806b">NODE STATUS</text>
+  <circle cx="1068" cy="145" r="6" fill="#2cff88" class="pulse" filter="url(#glow)"/>
+  <circle cx="772" cy="186" r="4.5" fill="#2cff88" class="pulse"/><text x="790" y="190" font-size="14" fill="#d6e5da">BAKUNITY</text><text x="1048" y="190" text-anchor="end" font-size="12" fill="#2cff88">CONNECTED</text><path d="M770 204H1074" stroke="#183b25"/><circle cx="772" cy="233" r="4.5" fill="#2cff88" class="pulse"/><text x="790" y="237" font-size="14" fill="#d6e5da">OSVED</text><text x="1048" y="237" text-anchor="end" font-size="12" fill="#2cff88">BUILDING</text><path d="M770 251H1074" stroke="#183b25"/><circle cx="772" cy="280" r="4.5" fill="#2cff88" class="pulse"/><text x="790" y="284" font-size="14" fill="#d6e5da">BAK VPN</text><text x="1048" y="284" text-anchor="end" font-size="12" fill="#2cff88">ONLINE</text><path d="M770 298H1074" stroke="#183b25"/><circle cx="772" cy="327" r="4.5" fill="#2cff88" class="pulse"/><text x="790" y="331" font-size="14" fill="#d6e5da">AI / AUTO</text><text x="1048" y="331" text-anchor="end" font-size="12" fill="#2cff88">ACTIVE</text><path d="M770 345H1074" stroke="#183b25"/>
+  <text x="770" y="367" font-size="11" fill="#607c69">AI · INFRA · NETWORK · PRODUCTS</text>
+</g>
+
+<g class="dash" stroke="#2cff88" stroke-opacity=".24" fill="none"><path d="M1102 412C1050 450 1004 470 938 480"/><circle cx="934" cy="482" r="44"/><circle cx="934" cy="482" r="24"/></g>
+<circle cx="934" cy="482" r="4" fill="#2cff88" class="pulse" filter="url(#glow)"/>
+
+<g transform="translate(58 518)"><circle cx="7" cy="7" r="6" fill="#2cff88" class="pulse" filter="url(#glow)"/><text x="24" y="12" class="m" font-size="13" font-weight="700" fill="#2cff88">SYSTEM ONLINE</text><text x="180" y="12" class="m" font-size="13" fill="#55715f">// BAKUNITY NODE</text><rect x="326" y="-2" width="9" height="17" fill="#2cff88" class="blink"/></g>
+
+<rect x="24" y="-18" width="1152" height="3" fill="url(#scan)" class="scan" filter="url(#glow)"/>
 </svg>
