@@ -1,58 +1,56 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
-<title id="title">TimaBak</title><desc id="desc">Личный профиль TimaBak в стиле Matrix terminal</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="540" viewBox="0 0 1200 540" role="img" aria-labelledby="title desc">
+<title id="title">TimaBak</title><desc id="desc">TimaBak — Digital Systems Builder</desc>
 <defs>
-  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#010302"/><stop offset=".46" stop-color="#07100a"/><stop offset="1" stop-color="#020504"/></linearGradient>
-  <radialGradient id="halo"><stop stop-color="#2cff88" stop-opacity=".18"/><stop offset=".58" stop-color="#2cff88" stop-opacity=".045"/><stop offset="1" stop-color="#2cff88" stop-opacity="0"/></radialGradient>
-  <linearGradient id="scan" x1="0" x2="1"><stop stop-color="#2cff88" stop-opacity="0"/><stop offset=".35" stop-color="#2cff88" stop-opacity=".55"/><stop offset=".5" stop-color="#d9ffe5"/><stop offset=".65" stop-color="#2cff88" stop-opacity=".55"/><stop offset="1" stop-color="#2cff88" stop-opacity="0"/></linearGradient>
-  <filter id="glow"><feGaussianBlur stdDeviation="3.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-  <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#225a36" stroke-width="1" opacity=".11"/></pattern>
-  <clipPath id="rainClip"><rect x="670" y="78" width="490" height="402" rx="18"/></clipPath>
-  <style>
-  .m{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"DejaVu Sans Mono","Liberation Mono",monospace}
-  .rain1{animation:rain 7.5s linear infinite}.rain2{animation:rain 9.8s linear infinite -2s}.rain3{animation:rain 6.8s linear infinite -4s}.rain4{animation:rain 10.4s linear infinite -1s}.rain5{animation:rain 8.7s linear infinite -5s}.rain6{animation:rain 11.3s linear infinite -6s}.rain7{animation:rain 7.9s linear infinite -3s}.rain8{animation:rain 9.2s linear infinite -7s}
-  .scan{animation:scan 6.8s linear infinite}.pulse{animation:pulse 2.1s ease-in-out infinite}.blink{animation:blink 1s steps(1,end) infinite}.dash{stroke-dasharray:7 10;animation:dash 11s linear infinite}
-  .p1{animation:p1 10.5s linear infinite}.p2{animation:p2 10.5s linear infinite}.p3{animation:p3 10.5s linear infinite}
-  @keyframes rain{0%{transform:translateY(-390px);opacity:0}8%{opacity:.7}88%{opacity:.42}100%{transform:translateY(560px);opacity:0}}
-  @keyframes scan{0%{transform:translateY(-24px);opacity:0}8%{opacity:.95}91%{opacity:.28}100%{transform:translateY(590px);opacity:0}}
-  @keyframes pulse{0%,100%{opacity:.42}50%{opacity:1}}@keyframes blink{0%,48%{opacity:1}49%,100%{opacity:0}}@keyframes dash{to{stroke-dashoffset:-170}}
-  @keyframes p1{0%,2%{opacity:0}6%,29%{opacity:1}33%,100%{opacity:0}}@keyframes p2{0%,35%{opacity:0}39%,62%{opacity:1}66%,100%{opacity:0}}@keyframes p3{0%,68%{opacity:0}72%,95%{opacity:1}98%,100%{opacity:0}}
-  </style>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#010302"/><stop offset=".5" stop-color="#07100a"/><stop offset="1" stop-color="#020504"/></linearGradient>
+<radialGradient id="halo"><stop stop-color="#2cff88" stop-opacity=".16"/><stop offset=".6" stop-color="#2cff88" stop-opacity=".04"/><stop offset="1" stop-color="#2cff88" stop-opacity="0"/></radialGradient>
+<linearGradient id="scan" x1="0" x2="1"><stop stop-color="#2cff88" stop-opacity="0"/><stop offset=".42" stop-color="#2cff88" stop-opacity=".7"/><stop offset=".5" stop-color="#e6ffed"/><stop offset=".58" stop-color="#2cff88" stop-opacity=".7"/><stop offset="1" stop-color="#2cff88" stop-opacity="0"/></linearGradient>
+<filter id="glow"><feGaussianBlur stdDeviation="3.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#225a36" stroke-width="1" opacity=".105"/></pattern>
+<clipPath id="rainClip"><rect x="676" y="78" width="486" height="404" rx="18"/></clipPath>
+<style>
+.m{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"DejaVu Sans Mono","Liberation Mono",monospace}
+.r1{animation:r 7.2s linear infinite}.r2{animation:r 9.4s linear infinite -1.8s}.r3{animation:r 6.4s linear infinite -4.2s}.r4{animation:r 10.6s linear infinite -1s}.r5{animation:r 8.4s linear infinite -5.1s}.r6{animation:r 11.4s linear infinite -6.2s}.r7{animation:r 7.8s linear infinite -3.4s}.r8{animation:r 9.1s linear infinite -7.1s}
+.scan{animation:s 6.5s linear infinite}.p{animation:p 2.15s ease-in-out infinite}.blink{animation:b 1s steps(1,end) infinite}.dash{stroke-dasharray:7 10;animation:d 11s linear infinite}
+@keyframes r{0%{transform:translateY(-390px);opacity:0}8%{opacity:.72}90%{opacity:.42}100%{transform:translateY(560px);opacity:0}}
+@keyframes s{0%{transform:translateY(-24px);opacity:0}8%{opacity:.95}92%{opacity:.28}100%{transform:translateY(580px);opacity:0}}
+@keyframes p{0%,100%{opacity:.42}50%{opacity:1}}@keyframes b{0%,48%{opacity:1}49%,100%{opacity:0}}@keyframes d{to{stroke-dashoffset:-170}}
+</style>
 </defs>
-<rect width="1200" height="560" rx="28" fill="url(#bg)"/><rect width="1200" height="560" rx="28" fill="url(#grid)"/><ellipse cx="935" cy="275" rx="330" ry="280" fill="url(#halo)"/><rect x="1.5" y="1.5" width="1197" height="557" rx="26.5" fill="none" stroke="#28613d" stroke-opacity=".78"/><path d="M34 76H1166" stroke="#173a25"/>
-<circle cx="60" cy="42" r="6" fill="#ff5f57"/><circle cx="82" cy="42" r="6" fill="#febc2e"/><circle cx="104" cy="42" r="6" fill="#28c840"/><text x="136" y="47" class="m" font-size="13" fill="#688775">tima@bakunity:~/profile</text><text x="948" y="47" class="m" font-size="12" fill="#2cff88">[ PERSONAL NODE // ONLINE ]</text>
+<rect width="1200" height="540" rx="28" fill="url(#bg)"/><rect width="1200" height="540" rx="28" fill="url(#grid)"/><ellipse cx="944" cy="280" rx="330" ry="260" fill="url(#halo)"/><rect x="1.5" y="1.5" width="1197" height="537" rx="26.5" fill="none" stroke="#28613d" stroke-opacity=".78"/><path d="M34 76H1166" stroke="#173a25"/>
+<circle cx="60" cy="42" r="6" fill="#ff5f57"/><circle cx="82" cy="42" r="6" fill="#febc2e"/><circle cx="104" cy="42" r="6" fill="#28c840"/><text x="136" y="47" class="m" font-size="13" fill="#688775">tima@bakunity:~/profile</text><text x="940" y="47" class="m" font-size="12" fill="#2cff88">[ BUILD MODE // ОНЛАЙН ]</text>
+
 <g clip-path="url(#rainClip)" class="m" fill="#2cff88" font-size="13">
-  <text x="704" y="-140" class="rain1" opacity=".28">0<tspan x="704" dy="20">1</tspan><tspan x="704" dy="20">AI</tspan><tspan x="704" dy="20">BAK</tspan><tspan x="704" dy="20">SYS</tspan><tspan x="704" dy="20">01</tspan><tspan x="704" dy="20">NET</tspan><tspan x="704" dy="20">11</tspan></text>
-  <text x="758" y="-60" class="rain2" opacity=".18">1<tspan x="758" dy="20">0</tspan><tspan x="758" dy="20">OS</tspan><tspan x="758" dy="20">VED</tspan><tspan x="758" dy="20">AI</tspan><tspan x="758" dy="20">10</tspan><tspan x="758" dy="20">BOT</tspan></text>
-  <text x="818" y="-220" class="rain3" opacity=".34">B<tspan x="818" dy="20">A</tspan><tspan x="818" dy="20">K</tspan><tspan x="818" dy="20">U</tspan><tspan x="818" dy="20">N</tspan><tspan x="818" dy="20">I</tspan><tspan x="818" dy="20">T</tspan><tspan x="818" dy="20">Y</tspan></text>
-  <text x="878" y="-100" class="rain4" opacity=".2">01<tspan x="878" dy="20">VPN</tspan><tspan x="878" dy="20">NET</tspan><tspan x="878" dy="20">AI</tspan><tspan x="878" dy="20">OPS</tspan><tspan x="878" dy="20">11</tspan></text>
-  <text x="938" y="-260" class="rain5" opacity=".3">AI<tspan x="938" dy="20">01</tspan><tspan x="938" dy="20">SYS</tspan><tspan x="938" dy="20">RDP</tspan><tspan x="938" dy="20">10</tspan><tspan x="938" dy="20">INFRA</tspan></text>
-  <text x="998" y="-80" class="rain6" opacity=".17">1<tspan x="998" dy="20">0</tspan><tspan x="998" dy="20">API</tspan><tspan x="998" dy="20">AI</tspan><tspan x="998" dy="20">DOCKER</tspan><tspan x="998" dy="20">01</tspan></text>
-  <text x="1062" y="-190" class="rain7" opacity=".26">NET<tspan x="1062" dy="20">11</tspan><tspan x="1062" dy="20">BAK</tspan><tspan x="1062" dy="20">OS</tspan><tspan x="1062" dy="20">AI</tspan><tspan x="1062" dy="20">SYS</tspan></text>
-  <text x="1122" y="-40" class="rain8" opacity=".16">01<tspan x="1122" dy="20">VPN</tspan><tspan x="1122" dy="20">AI</tspan><tspan x="1122" dy="20">NET</tspan><tspan x="1122" dy="20">10</tspan><tspan x="1122" dy="20">OPS</tspan></text>
+<text x="704" y="-140" class="r1" opacity=".28">0<tspan x="704" dy="20">1</tspan><tspan x="704" dy="20">AI</tspan><tspan x="704" dy="20">BAK</tspan><tspan x="704" dy="20">SYS</tspan><tspan x="704" dy="20">NET</tspan></text>
+<text x="760" y="-60" class="r2" opacity=".18">1<tspan x="760" dy="20">0</tspan><tspan x="760" dy="20">OS</tspan><tspan x="760" dy="20">VED</tspan><tspan x="760" dy="20">AI</tspan><tspan x="760" dy="20">BOT</tspan></text>
+<text x="820" y="-220" class="r3" opacity=".34">B<tspan x="820" dy="20">A</tspan><tspan x="820" dy="20">K</tspan><tspan x="820" dy="20">U</tspan><tspan x="820" dy="20">N</tspan><tspan x="820" dy="20">I</tspan><tspan x="820" dy="20">T</tspan><tspan x="820" dy="20">Y</tspan></text>
+<text x="880" y="-100" class="r4" opacity=".2">01<tspan x="880" dy="20">VPN</tspan><tspan x="880" dy="20">NET</tspan><tspan x="880" dy="20">AI</tspan><tspan x="880" dy="20">OPS</tspan></text>
+<text x="940" y="-260" class="r5" opacity=".3">AI<tspan x="940" dy="20">SYS</tspan><tspan x="940" dy="20">RDP</tspan><tspan x="940" dy="20">INFRA</tspan></text>
+<text x="1000" y="-80" class="r6" opacity=".17">1<tspan x="1000" dy="20">API</tspan><tspan x="1000" dy="20">AI</tspan><tspan x="1000" dy="20">DOCKER</tspan></text>
+<text x="1062" y="-190" class="r7" opacity=".26">NET<tspan x="1062" dy="20">BAK</tspan><tspan x="1062" dy="20">OS</tspan><tspan x="1062" dy="20">AI</tspan></text>
+<text x="1120" y="-40" class="r8" opacity=".16">VPN<tspan x="1120" dy="20">AI</tspan><tspan x="1120" dy="20">NET</tspan><tspan x="1120" dy="20">OPS</tspan></text>
 </g>
-<text x="58" y="118" class="m" font-size="14" fill="#67d98b">$ whoami --verbose</text><text x="58" y="198" class="m" font-size="66" font-weight="800" letter-spacing="10" fill="#f3fff6">TIMA BAK</text><rect x="58" y="218" width="540" height="1.5" fill="#2cff88" opacity=".48"/>
-<text x="58" y="252" class="m" font-size="16" fill="#789a84">ПРЕДПРИНИМАТЕЛЬ · PRODUCT BUILDER · СИСТЕМНЫЙ ИНЖЕНЕР</text>
-<g class="m" font-size="20" font-weight="700" fill="#2cff88" filter="url(#glow)">
-  <text x="58" y="310" class="p1">СТРОЮ ПРОДУКТЫ НА СТЫКЕ AI, СОФТА И ИНФРАСТРУКТУРЫ</text>
-  <text x="58" y="310" class="p2">ИДЕЯ → ПРОТОТИП → ПРОДУКТ → МАСШТАБ</text>
-  <text x="58" y="310" class="p3">АВТОМАТИЗАЦИЯ · СЕТИ · СИСТЕМЫ · ПРОДУКТЫ</text>
-</g>
+
+<text x="58" y="120" class="m" font-size="14" fill="#67d98b">$ whoami</text>
+<text x="58" y="205" class="m" font-size="70" font-weight="800" letter-spacing="10" fill="#f3fff6">TIMA BAK</text>
+<text x="58" y="252" class="m" font-size="23" font-weight="800" letter-spacing="2" fill="#2cff88" filter="url(#glow)">DIGITAL SYSTEMS BUILDER</text>
+<text x="58" y="294" class="m" font-size="16" fill="#92b09c">AI · ПРОДУКТЫ · ИНФРАСТРУКТУРА</text>
+<rect x="58" y="322" width="540" height="1.5" fill="#2cff88" opacity=".4"/>
+<text x="58" y="366" class="m" font-size="16" font-weight="700" fill="#d2e2d6">ИДЕЯ → СОБРАТЬ → ЗАПУСТИТЬ → МАСШТАБИРОВАТЬ</text>
+
 <g class="m">
-  <rect x="58" y="350" width="540" height="122" rx="16" fill="#061009" stroke="#183f27"/>
-  <text x="80" y="380" font-size="12" fill="#5f806b">КАК Я РАБОТАЮ</text>
-  <text x="80" y="414" font-size="14" fill="#c5d8ca">идея</text><text x="132" y="414" font-size="14" fill="#2cff88">→</text><text x="162" y="414" font-size="14" fill="#c5d8ca">прототип</text><text x="254" y="414" font-size="14" fill="#2cff88">→</text><text x="284" y="414" font-size="14" fill="#c5d8ca">продукт</text><text x="356" y="414" font-size="14" fill="#2cff88">→</text><text x="386" y="414" font-size="14" fill="#c5d8ca">пользователи</text><text x="500" y="414" font-size="14" fill="#2cff88">→</text><text x="530" y="414" font-size="14" fill="#c5d8ca">рост</text>
-  <text x="80" y="448" font-size="12" fill="#678471">СОБРАТЬ → ЗАПУСТИТЬ → ПРОВЕРИТЬ → УЛУЧШИТЬ</text>
+<rect x="58" y="405" width="540" height="78" rx="15" fill="#061009" stroke="#183f27"/>
+<text x="80" y="435" font-size="12" fill="#5f806b">СТРОЮ СИСТЕМУ ЦЕЛИКОМ</text>
+<text x="80" y="462" font-size="12.5" fill="#8eaa96">продукт · AI · backend · сети · инфраструктура</text>
 </g>
+
 <g class="m">
-  <rect x="742" y="118" width="360" height="268" rx="18" fill="#061009" fill-opacity=".86" stroke="#245d39"/>
-  <text x="770" y="150" font-size="13" fill="#5f806b">СЕЙЧАС В ФОКУСЕ</text><circle cx="1068" cy="145" r="6" fill="#2cff88" class="pulse" filter="url(#glow)"/>
-  <circle cx="772" cy="186" r="4.5" fill="#2cff88" class="pulse"/><text x="790" y="190" font-size="14" fill="#d6e5da">BAKUNITY</text><text x="1048" y="190" text-anchor="end" font-size="12" fill="#2cff88">ЭКОСИСТЕМА</text><path d="M770 204H1074" stroke="#183b25"/>
-  <circle cx="772" cy="233" r="4.5" fill="#2cff88" class="pulse"/><text x="790" y="237" font-size="14" fill="#d6e5da">OSVED</text><text x="1048" y="237" text-anchor="end" font-size="12" fill="#2cff88">AI-ПРОДУКТ</text><path d="M770 251H1074" stroke="#183b25"/>
-  <circle cx="772" cy="280" r="4.5" fill="#2cff88" class="pulse"/><text x="790" y="284" font-size="14" fill="#d6e5da">BAK VPN</text><text x="1048" y="284" text-anchor="end" font-size="12" fill="#2cff88">СЕТИ</text><path d="M770 298H1074" stroke="#183b25"/>
-  <circle cx="772" cy="327" r="4.5" fill="#2cff88" class="pulse"/><text x="790" y="331" font-size="14" fill="#d6e5da">AUTOMATION</text><text x="1048" y="331" text-anchor="end" font-size="12" fill="#2cff88">AI + OPS</text><path d="M770 345H1074" stroke="#183b25"/>
-  <text x="770" y="367" font-size="11" fill="#607c69">BUILD · SHIP · OPERATE · ITERATE</text>
+<rect x="748" y="118" width="352" height="254" rx="18" fill="#061009" fill-opacity=".86" stroke="#245d39"/>
+<text x="776" y="150" font-size="13" fill="#5f806b">СЕЙЧАС СТРОЮ</text><circle cx="1068" cy="145" r="6" fill="#2cff88" class="p" filter="url(#glow)"/>
+<circle cx="778" cy="190" r="4.5" fill="#2cff88" class="p"/><text x="796" y="194" font-size="14" fill="#d6e5da">BAKUNITY</text><text x="1060" y="194" text-anchor="end" font-size="11.5" fill="#2cff88">ЭКОСИСТЕМА</text><path d="M776 212H1072" stroke="#183b25"/><circle cx="778" cy="245" r="4.5" fill="#2cff88" class="p"/><text x="796" y="249" font-size="14" fill="#d6e5da">OSVED</text><text x="1060" y="249" text-anchor="end" font-size="11.5" fill="#2cff88">AI-ПЛАТФОРМА</text><path d="M776 267H1072" stroke="#183b25"/><circle cx="778" cy="300" r="4.5" fill="#2cff88" class="p"/><text x="796" y="304" font-size="14" fill="#d6e5da">BAK VPN</text><text x="1060" y="304" text-anchor="end" font-size="11.5" fill="#2cff88">СЕТЕВОЙ ПРОДУКТ</text><path d="M776 322H1072" stroke="#183b25"/>
+<text x="776" y="350" font-size="11" fill="#607c69">BUILD · SHIP · OPERATE · SCALE</text>
 </g>
-<g class="dash" stroke="#2cff88" stroke-opacity=".24" fill="none"><path d="M1102 412C1050 450 1004 470 938 480"/><circle cx="934" cy="482" r="44"/><circle cx="934" cy="482" r="24"/></g><circle cx="934" cy="482" r="4" fill="#2cff88" class="pulse" filter="url(#glow)"/>
-<g transform="translate(58 518)"><circle cx="7" cy="7" r="6" fill="#2cff88" class="pulse" filter="url(#glow)"/><text x="24" y="12" class="m" font-size="13" font-weight="700" fill="#2cff88">BUILD MODE</text><text x="118" y="12" class="m" font-size="13" fill="#55715f">// BAKUNITY · OSVED · BAK VPN</text><rect x="350" y="-2" width="9" height="17" fill="#2cff88" class="blink"/></g>
+
+<g class="dash" stroke="#2cff88" stroke-opacity=".22" fill="none"><path d="M1100 410C1046 448 998 470 934 482"/><circle cx="930" cy="484" r="43"/><circle cx="930" cy="484" r="23"/></g><circle cx="930" cy="484" r="4" fill="#2cff88" class="p" filter="url(#glow)"/>
+<g transform="translate(58 510)"><circle cx="7" cy="7" r="6" fill="#2cff88" class="p" filter="url(#glow)"/><text x="24" y="12" class="m" font-size="13" font-weight="700" fill="#2cff88">DIGITAL SYSTEMS BUILDER</text><text x="224" y="12" class="m" font-size="13" fill="#55715f">// BAKUNITY · OSVED · BAK VPN</text><rect x="462" y="-2" width="9" height="17" fill="#2cff88" class="blink"/></g>
 <rect x="24" y="-18" width="1152" height="3" fill="url(#scan)" class="scan" filter="url(#glow)"/>
 </svg>
