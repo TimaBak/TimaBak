@@ -7,11 +7,11 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Bakunity"><img src="./assets/nav-bakunity.svg" width="18.5%" alt="Bakunity" /></a>
-  <a href="https://tima.biz"><img src="./assets/nav-tima.svg" width="18.5%" alt="tima.biz" /></a>
-  <a href="https://bakvpn.me"><img src="./assets/nav-vpn.svg" width="18.5%" alt="Bak VPN" /></a>
-  <a href="https://osved.tima.biz"><img src="./assets/nav-osved.svg" width="18.5%" alt="OSVED" /></a>
-  <a href="https://github.com/TimaBak?tab=repositories"><img src="./assets/nav-github.svg" width="18.5%" alt="GitHub" /></a>
+  <a href="https://github.com/Bakunity"><img src="./assets/ru/nav-bakunity.svg" width="18.5%" alt="Bakunity" /></a>
+  <a href="https://tima.biz"><img src="./assets/ru/nav-tima.svg" width="18.5%" alt="tima.biz" /></a>
+  <a href="https://bakvpn.me"><img src="./assets/ru/nav-vpn.svg" width="18.5%" alt="Bak VPN" /></a>
+  <a href="https://osved.tima.biz"><img src="./assets/ru/nav-osved.svg" width="18.5%" alt="OSVED" /></a>
+  <a href="https://github.com/TimaBak?tab=repositories"><img src="./assets/ru/nav-github.svg" width="18.5%" alt="GitHub" /></a>
 </p>
 
 <p align="center">
@@ -124,5 +124,5 @@
 </p>
 
 <p align="center">
-  <img src="./assets/footer.svg" width="100%" alt="Создавать запускать измерять улучшать" />
+  <img src="./assets/ru/footer.svg" width="100%" alt="Создавать запускать измерять улучшать" />
 </p>
