@@ -10,7 +10,7 @@
   <a href="https://github.com/Bakunity"><img src="./assets/nav-bakunity.svg" width="18.5%" alt="Bakunity" /></a>
   <a href="https://tima.biz"><img src="./assets/nav-tima.svg" width="18.5%" alt="tima.biz" /></a>
   <a href="https://bakvpn.me"><img src="./assets/nav-vpn.svg" width="18.5%" alt="Bak VPN" /></a>
-  <a href="https://osved.tima.biz"><img src="./assets/nav-osved.svg" width="18.5%" alt="OSVED" /></a>
+  <a href="https://rdp.bakunity.com"><img src="./assets/nav-rdp.svg" width="18.5%" alt="Bakunity RDP" /></a>
   <a href="https://github.com/TimaBak?tab=repositories"><img src="./assets/nav-github.svg" width="18.5%" alt="GitHub repositories" /></a>
 </p>
 
@@ -32,7 +32,7 @@
 ## `> ls ./products --visual`
 
 <p align="center">
-  <a href="https://github.com/TimaBak/osved"><img src="./assets/card-osved.svg" width="49%" alt="OSVED — personal intelligence platform" /></a>
+  <a href="https://github.com/TimaBak/osved"><img src="./assets/card-rdp.svg" width="49%" alt="Bakunity RDP — personal intelligence platform" /></a>
   <a href="https://bakvpn.me"><img src="./assets/card-vpn.svg" width="49%" alt="Bak VPN — networking product" /></a>
 </p>
 
@@ -65,7 +65,7 @@ I approach every product as a connected system. The user experience, application
 ```text
 Current focus:
 ├── growing Bakunity into an ecosystem of products and infrastructure
-├── building OSVED, a personal intelligence platform
+├── developing Bakunity RDP, a remote-access gateway for Windows PCs
 ├── developing Bak VPN as a complete networking product
 ├── integrating AI agents into real-world workflows
 └── making infrastructure easier to manage as one connected system
@@ -73,7 +73,7 @@ Current focus:
 
 ## `> lab`
 
-- **[OSVED](https://github.com/TimaBak/osved)** — personal intelligence platform
+- **[Bakunity RDP](https://github.com/Bakunity/RDP)** — remote access to Windows PCs through a Linux gateway, managed via Telegram
 - **[System Architect](https://github.com/TimaBak/System-Architect)** — experiments in system architecture and automation
 - **[Ubuntu Hyper-V AI Server](https://github.com/TimaBak/Ubuntu-Hyperv-Hermes-Ai-Server)** — infrastructure experiments
 - **[Courses](https://github.com/TimaBak/Courses)** — learning and research workspace
@@ -105,7 +105,7 @@ Current focus:
   &nbsp;·&nbsp;
   <a href="https://bakvpn.me"><strong>Bak VPN</strong></a>
   &nbsp;·&nbsp;
-  <a href="https://osved.tima.biz"><strong>OSVED</strong></a>
+  <a href="https://rdp.bakunity.com"><strong>Bakunity RDP</strong></a>
   &nbsp;·&nbsp;
   <a href="mailto:i@tima.biz"><strong>i@tima.biz</strong></a>
 </p>
