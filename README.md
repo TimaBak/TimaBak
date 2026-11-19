@@ -7,14 +7,6 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Bakunity"><img src="./assets/nav-bakunity.svg" width="18.5%" alt="Bakunity" /></a>
-  <a href="https://tima.biz"><img src="./assets/nav-tima.svg" width="18.5%" alt="tima.biz" /></a>
-  <a href="https://bakvpn.me"><img src="./assets/nav-vpn.svg" width="18.5%" alt="Bak VPN" /></a>
-  <a href="https://rdp.bakunity.com"><img src="./assets/nav-rdp.svg" width="18.5%" alt="Bakunity RDP" /></a>
-  <a href="https://github.com/TimaBak?tab=repositories"><img src="./assets/nav-github.svg" width="18.5%" alt="GitHub repositories" /></a>
-</p>
-
-<p align="center">
   <strong>AI & SOFTWARE DEVELOPER · ENTREPRENEUR</strong><br/>
   I build digital products end to end — from product design and AI to backend development, networking, and infrastructure.
 </p>
@@ -37,14 +29,13 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Bakunity"><img src="./assets/card-bakunity.svg" width="49%" alt="Bakunity ecosystem" /></a>
-  <a href="https://github.com/TimaBak/System-Architect"><img src="./assets/card-infra.svg" width="49%" alt="Systems Lab — infrastructure and automation" /></a>
+  <a href="https://github.com/Bakunity"><img src="./assets/card-bakunity.svg" width="60%" alt="Bakunity ecosystem" /></a>
 </p>
 
 ## `> build.loop`
 
 ```text
-idea → build → launch → operate → scale
+idea → design → build → launch → improve
 ```
 
 I approach every product as a connected system. The user experience, application logic, AI, backend, networks, and infrastructure all need to work together — not just in a demo, but in production.
@@ -99,17 +90,9 @@ Current focus:
 ```
 
 <p align="center">
-  <a href="https://tima.biz"><strong>tima.biz</strong></a>
-  &nbsp;·&nbsp;
-  <a href="https://github.com/Bakunity"><strong>Bakunity</strong></a>
-  &nbsp;·&nbsp;
-  <a href="https://bakvpn.me"><strong>Bak VPN</strong></a>
-  &nbsp;·&nbsp;
-  <a href="https://rdp.bakunity.com"><strong>Bakunity RDP</strong></a>
-  &nbsp;·&nbsp;
-  <a href="mailto:i@tima.biz"><strong>i@tima.biz</strong></a>
+  <a href="https://tima.biz">tima.biz</a> · <a href="mailto:i@tima.biz">i@tima.biz</a>
 </p>
 
 <p align="center">
-  <img src="./assets/footer.svg" width="100%" alt="Build, ship, measure, improve" />
+  <img src="./assets/footer.svg" width="100%" alt="From idea to product" />
 </p>
