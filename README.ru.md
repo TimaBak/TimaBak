@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <img src="./assets/ru/hero.svg" width="100%" alt="Профиль TimaBak" />
+  <img src="./assets/ru/hero.svg?v=3" width="100%" alt="Профиль TimaBak" />
 </p>
 
 <p align="center">
@@ -15,21 +15,21 @@
   <code>AI</code> × <code>ПРОДУКТЫ</code> × <code>ИНФРАСТРУКТУРА</code>
 </p>
 
-<img src="./assets/ru/system-status.svg" width="100%" alt="Текущий статус системы" />
+<img src="./assets/ru/system-status.svg?v=3" width="100%" alt="Текущий статус системы" />
 
 ## `> map ./bakunity`
 
-<img src="./assets/ru/ecosystem.svg" width="100%" alt="Экосистема Bakunity" />
+<img src="./assets/ru/ecosystem.svg?v=3" width="100%" alt="Экосистема Bakunity" />
 
 ## `> ls ./products --visual`
 
 <p align="center">
-  <a href="https://github.com/Bakunity/RDP"><img src="./assets/ru/card-rdp.svg" width="49%" alt="Bakunity RDP" /></a>
-  <a href="https://bakvpn.me"><img src="./assets/ru/card-vpn.svg" width="49%" alt="Bak VPN" /></a>
+  <a href="https://github.com/Bakunity/RDP"><img src="./assets/ru/card-rdp.svg?v=3" width="49%" alt="Bakunity RDP" /></a>
+  <a href="https://bakvpn.me"><img src="./assets/ru/card-vpn.svg?v=3" width="49%" alt="Bak VPN" /></a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/Bakunity"><img src="./assets/ru/card-bakunity.svg" width="60%" alt="Bakunity" /></a>
+  <a href="https://github.com/Bakunity"><img src="./assets/ru/card-bakunity.svg?v=3" width="60%" alt="Bakunity" /></a>
 </p>
 
 ## `> build.loop`
@@ -95,5 +95,5 @@
 </p>
 
 <p align="center">
-  <img src="./assets/ru/footer.svg" width="100%" alt="От идеи до работающего продукта" />
+  <img src="./assets/ru/footer.svg?v=3" width="100%" alt="От идеи до работающего продукта" />
 </p>
