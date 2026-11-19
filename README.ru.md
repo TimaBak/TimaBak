@@ -32,7 +32,7 @@
 ## `> ls ./products --visual`
 
 <p align="center">
-  <a href="https://github.com/TimaBak/osved"><img src="./assets/ru/card-rdp.svg" width="49%" alt="Bakunity RDP" /></a>
+  <a href="https://github.com/Bakunity/RDP"><img src="./assets/ru/card-rdp.svg" width="49%" alt="Bakunity RDP" /></a>
   <a href="https://bakvpn.me"><img src="./assets/ru/card-vpn.svg" width="49%" alt="Bak VPN" /></a>
 </p>
 
