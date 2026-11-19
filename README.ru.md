@@ -7,14 +7,6 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Bakunity"><img src="./assets/ru/nav-bakunity.svg" width="18.5%" alt="Bakunity" /></a>
-  <a href="https://tima.biz"><img src="./assets/ru/nav-tima.svg" width="18.5%" alt="tima.biz" /></a>
-  <a href="https://bakvpn.me"><img src="./assets/ru/nav-vpn.svg" width="18.5%" alt="Bak VPN" /></a>
-  <a href="https://rdp.bakunity.com"><img src="./assets/ru/nav-rdp.svg" width="18.5%" alt="Bakunity RDP" /></a>
-  <a href="https://github.com/TimaBak?tab=repositories"><img src="./assets/ru/nav-github.svg" width="18.5%" alt="GitHub" /></a>
-</p>
-
-<p align="center">
   <strong>DIGITAL SYSTEMS BUILDER</strong><br/>
   Разрабатываю цифровые продукты — от интерфейсов и AI до серверной части и инфраструктуры.
 </p>
@@ -37,8 +29,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Bakunity"><img src="./assets/ru/card-bakunity.svg" width="49%" alt="Bakunity" /></a>
-  <a href="https://github.com/TimaBak/System-Architect"><img src="./assets/ru/card-infra.svg" width="49%" alt="Systems Lab" /></a>
+  <a href="https://github.com/Bakunity"><img src="./assets/ru/card-bakunity.svg" width="60%" alt="Bakunity" /></a>
 </p>
 
 ## `> build.loop`
@@ -100,13 +91,7 @@
 ```
 
 <p align="center">
-  <a href="https://tima.biz"><strong>tima.biz</strong></a>
-  &nbsp;·&nbsp;
-  <a href="https://github.com/Bakunity"><strong>Bakunity</strong></a>
-  &nbsp;·&nbsp;
-  <a href="https://bakvpn.me"><strong>Bak VPN</strong></a>
-  &nbsp;·&nbsp;
-  <a href="https://rdp.bakunity.com"><strong>Bakunity RDP</strong></a>
+  <a href="https://tima.biz">tima.biz</a> · <a href="mailto:i@tima.biz">i@tima.biz</a>
 </p>
 
 <p align="center">
