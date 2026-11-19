@@ -32,7 +32,7 @@
 ## `> ls ./products --visual`
 
 <p align="center">
-  <a href="https://github.com/Bakunity/RDP"><img src="./assets/card-rdp.svg" width="49%" alt="Bakunity RDP — personal intelligence platform" /></a>
+  <a href="https://github.com/Bakunity/RDP"><img src="./assets/card-rdp.svg" width="49%" alt="Bakunity RDP — remote access gateway" /></a>
   <a href="https://bakvpn.me"><img src="./assets/card-vpn.svg" width="49%" alt="Bak VPN — networking product" /></a>
 </p>
 
