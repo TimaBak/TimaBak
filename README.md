@@ -1,102 +1,101 @@
 <p align="right">
-  <a href="./README.en.md">English</a> · <strong>Русский</strong>
+  <strong>English</strong> · <a href="./README.ru.md">Русский</a>
 </p>
 
 <p align="center">
-  <img src="./assets/ru/hero.svg" width="100%" alt="Профиль TimaBak" />
+  <img src="./assets/hero.svg" width="100%" alt="TimaBak — Digital Systems Builder" />
 </p>
 
 <p align="center">
-  <a href="https://github.com/Bakunity"><img src="./assets/ru/nav-bakunity.svg" width="18.5%" alt="Bakunity" /></a>
-  <a href="https://tima.biz"><img src="./assets/ru/nav-tima.svg" width="18.5%" alt="tima.biz" /></a>
-  <a href="https://bakvpn.me"><img src="./assets/ru/nav-vpn.svg" width="18.5%" alt="Bak VPN" /></a>
-  <a href="https://osved.tima.biz"><img src="./assets/ru/nav-osved.svg" width="18.5%" alt="OSVED" /></a>
-  <a href="https://github.com/TimaBak?tab=repositories"><img src="./assets/ru/nav-github.svg" width="18.5%" alt="GitHub" /></a>
+  <a href="https://github.com/Bakunity"><img src="./assets/nav-bakunity.svg" width="18.5%" alt="Bakunity" /></a>
+  <a href="https://tima.biz"><img src="./assets/nav-tima.svg" width="18.5%" alt="tima.biz" /></a>
+  <a href="https://bakvpn.me"><img src="./assets/nav-vpn.svg" width="18.5%" alt="Bak VPN" /></a>
+  <a href="https://osved.tima.biz"><img src="./assets/nav-osved.svg" width="18.5%" alt="OSVED" /></a>
+  <a href="https://github.com/TimaBak?tab=repositories"><img src="./assets/nav-github.svg" width="18.5%" alt="GitHub repositories" /></a>
 </p>
 
 <p align="center">
-  <strong>DIGITAL SYSTEMS BUILDER</strong><br/>
-  Строю цифровые продукты целиком: от идеи и интерфейса до AI, backend, сетей и инфраструктуры.
+  <strong>AI & SOFTWARE DEVELOPER · ENTREPRENEUR</strong><br/>
+  I build digital products end to end — from product design and AI to backend development, networking, and infrastructure.
 </p>
 
 <p align="center">
-  <code>AI</code> × <code>ПРОДУКТЫ</code> × <code>ИНФРАСТРУКТУРА</code>
+  <code>AI</code> × <code>PRODUCTS</code> × <code>INFRASTRUCTURE</code>
 </p>
 
-<img src="./assets/ru/system-status.svg" width="100%" alt="Текущий статус системы" />
+<img src="./assets/system-status.svg" width="100%" alt="Current development and infrastructure status" />
 
 ## `> map ./bakunity`
 
-<img src="./assets/ru/ecosystem.svg" width="100%" alt="Экосистема Bakunity" />
+<img src="./assets/ecosystem.svg" width="100%" alt="Bakunity product ecosystem" />
 
 ## `> ls ./products --visual`
 
 <p align="center">
-  <a href="https://github.com/TimaBak/osved"><img src="./assets/ru/card-osved.svg" width="49%" alt="OSVED" /></a>
-  <a href="https://bakvpn.me"><img src="./assets/ru/card-vpn.svg" width="49%" alt="Bak VPN" /></a>
+  <a href="https://github.com/TimaBak/osved"><img src="./assets/card-osved.svg" width="49%" alt="OSVED — personal intelligence platform" /></a>
+  <a href="https://bakvpn.me"><img src="./assets/card-vpn.svg" width="49%" alt="Bak VPN — networking product" /></a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/Bakunity"><img src="./assets/ru/card-bakunity.svg" width="49%" alt="Bakunity" /></a>
-  <a href="https://github.com/TimaBak/System-Architect"><img src="./assets/ru/card-infra.svg" width="49%" alt="Systems Lab" /></a>
+  <a href="https://github.com/Bakunity"><img src="./assets/card-bakunity.svg" width="49%" alt="Bakunity ecosystem" /></a>
+  <a href="https://github.com/TimaBak/System-Architect"><img src="./assets/card-infra.svg" width="49%" alt="Systems Lab — infrastructure and automation" /></a>
 </p>
 
 ## `> build.loop`
 
 ```text
-идея → собрать → запустить → эксплуатировать → масштабировать
+idea → build → launch → operate → scale
 ```
 
-Мне интересен продукт как целая система: интерфейс, логика, AI, backend, инфраструктура,
-сети и реальная эксплуатация — всё должно работать вместе.
+I approach every product as a connected system. The user experience, application logic, AI, backend, networks, and infrastructure all need to work together — not just in a demo, but in production.
 
 ## `> cat stack.txt`
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,ts,js,react,nextjs,nodejs,docker,linux,nginx,postgres,git,github,bash,powershell,cloudflare&perline=15" alt="Технологический стек" />
+  <img src="https://skillicons.dev/icons?i=python,ts,js,react,nextjs,nodejs,docker,linux,nginx,postgres,git,github,bash,powershell,cloudflare&perline=15" alt="Technology stack" />
 </p>
 
 <p align="center">
-  <code>LLM</code> · <code>AI-агенты</code> · <code>GitHub Actions</code> · <code>Docker</code> ·
-  <code>Linux</code> · <code>Сети</code> · <code>Удалённые системы</code> · <code>Автоматизация</code>
+  <code>LLMs</code> · <code>AI Agents</code> · <code>GitHub Actions</code> · <code>Docker</code> ·
+  <code>Linux</code> · <code>Networking</code> · <code>Remote Systems</code> · <code>Automation</code>
 </p>
 
 ## `> focus`
 
 ```text
-Сейчас:
-├── развиваю Bakunity как экосистему продуктов и инфраструктуры
-├── строю OSVED — персональную интеллектуальную платформу
-├── развиваю Bak VPN как полноценный сетевой продукт
-├── внедряю AI-агентов в реальные процессы
-└── собираю инфраструктуру так, чтобы она управлялась как система
+Current focus:
+├── growing Bakunity into an ecosystem of products and infrastructure
+├── building OSVED, a personal intelligence platform
+├── developing Bak VPN as a complete networking product
+├── integrating AI agents into real-world workflows
+└── making infrastructure easier to manage as one connected system
 ```
 
 ## `> lab`
 
-- **[OSVED](https://github.com/TimaBak/osved)** — персональная интеллектуальная платформа
-- **[System Architect](https://github.com/TimaBak/System-Architect)** — эксперименты с архитектурой и автоматизацией
-- **[Ubuntu Hyper-V AI Server](https://github.com/TimaBak/Ubuntu-Hyperv-Hermes-Ai-Server)** — инфраструктурные эксперименты
-- **[Courses](https://github.com/TimaBak/Courses)** — пространство обучения и исследований
+- **[OSVED](https://github.com/TimaBak/osved)** — personal intelligence platform
+- **[System Architect](https://github.com/TimaBak/System-Architect)** — experiments in system architecture and automation
+- **[Ubuntu Hyper-V AI Server](https://github.com/TimaBak/Ubuntu-Hyperv-Hermes-Ai-Server)** — infrastructure experiments
+- **[Courses](https://github.com/TimaBak/Courses)** — learning and research workspace
 
 ## `> github.matrix`
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/TimaBak/TimaBak/output/github-matrix-world-v8.svg?v=8" width="100%" alt="Матрица вкладов GitHub" />
+  <img src="https://raw.githubusercontent.com/TimaBak/TimaBak/output/github-matrix-world-v8.svg?v=8" width="100%" alt="GitHub contribution matrix" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=TimaBak&bg_color=0d1117&color=2cff88&line=2cff88&point=ffffff&hide_border=true&area=false&area_color=2cff88&custom_title=GitHub%20Activity" width="100%" alt="Активность TimaBak" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=TimaBak&bg_color=0d1117&color=2cff88&line=2cff88&point=ffffff&hide_border=true&area=false&area_color=2cff88&custom_title=GitHub%20Activity" width="100%" alt="TimaBak GitHub activity graph" />
 </p>
 
 ## `> principles`
 
 ```text
-01  сначала запустить, потом усложнять
-02  автоматизировать то, что повторяется
-03  инфраструктура — часть продукта
-04  AI должен давать измеримый результат
-05  реальное использование важнее красивой демки
+01  ship first, add complexity when needed
+02  automate recurring work
+03  treat infrastructure as part of the product
+04  use AI to deliver measurable results
+05  prioritize real-world use over polished demos
 ```
 
 <p align="center">
@@ -107,8 +106,10 @@
   <a href="https://bakvpn.me"><strong>Bak VPN</strong></a>
   &nbsp;·&nbsp;
   <a href="https://osved.tima.biz"><strong>OSVED</strong></a>
+  &nbsp;·&nbsp;
+  <a href="mailto:i@tima.biz"><strong>i@tima.biz</strong></a>
 </p>
 
 <p align="center">
-  <img src="./assets/ru/footer.svg" width="100%" alt="Создавать запускать измерять улучшать" />
+  <img src="./assets/footer.svg" width="100%" alt="Build, ship, measure, improve" />
 </p>
