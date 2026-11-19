@@ -32,7 +32,7 @@
 
 <text x="58" y="120" class="m" font-size="14" fill="#67d98b">$ whoami</text>
 <text x="58" y="205" class="m" font-size="70" font-weight="800" letter-spacing="10" fill="#f3fff6">TIMA BAK</text>
-<text x="58" y="252" class="m" font-size="21" font-weight="800" letter-spacing="1" fill="#2cff88" filter="url(#glow)">AI & SOFTWARE DEVELOPER</text>
+<text x="58" y="252" class="m" font-size="21" font-weight="800" letter-spacing="1" fill="#2cff88" filter="url(#glow)">AI &amp; SOFTWARE DEVELOPER</text>
 <text x="58" y="294" class="m" font-size="16" fill="#92b09c">AI · PRODUCTS · INFRASTRUCTURE</text>
 <rect x="58" y="322" width="540" height="1.5" fill="#2cff88" opacity=".4"/>
 <text x="58" y="366" class="m" font-size="16" font-weight="700" fill="#d2e2d6">IDEA → BUILD → LAUNCH → GROW</text>
