@@ -10,13 +10,13 @@
   <a href="https://github.com/Bakunity"><img src="./assets/ru/nav-bakunity.svg" width="18.5%" alt="Bakunity" /></a>
   <a href="https://tima.biz"><img src="./assets/ru/nav-tima.svg" width="18.5%" alt="tima.biz" /></a>
   <a href="https://bakvpn.me"><img src="./assets/ru/nav-vpn.svg" width="18.5%" alt="Bak VPN" /></a>
-  <a href="https://osved.tima.biz"><img src="./assets/ru/nav-osved.svg" width="18.5%" alt="OSVED" /></a>
+  <a href="https://rdp.bakunity.com"><img src="./assets/ru/nav-rdp.svg" width="18.5%" alt="Bakunity RDP" /></a>
   <a href="https://github.com/TimaBak?tab=repositories"><img src="./assets/ru/nav-github.svg" width="18.5%" alt="GitHub" /></a>
 </p>
 
 <p align="center">
   <strong>DIGITAL SYSTEMS BUILDER</strong><br/>
-  Строю цифровые продукты целиком: от идеи и интерфейса до AI, backend, сетей и инфраструктуры.
+  Разрабатываю цифровые продукты — от интерфейсов и AI до серверной части и инфраструктуры.
 </p>
 
 <p align="center">
@@ -32,7 +32,7 @@
 ## `> ls ./products --visual`
 
 <p align="center">
-  <a href="https://github.com/TimaBak/osved"><img src="./assets/ru/card-osved.svg" width="49%" alt="OSVED" /></a>
+  <a href="https://github.com/TimaBak/osved"><img src="./assets/ru/card-rdp.svg" width="49%" alt="Bakunity RDP" /></a>
   <a href="https://bakvpn.me"><img src="./assets/ru/card-vpn.svg" width="49%" alt="Bak VPN" /></a>
 </p>
 
@@ -44,11 +44,11 @@
 ## `> build.loop`
 
 ```text
-идея → собрать → запустить → эксплуатировать → масштабировать
+идея → разработка → запуск → развитие
 ```
 
-Мне интересен продукт как целая система: интерфейс, логика, AI, backend, инфраструктура,
-сети и реальная эксплуатация — всё должно работать вместе.
+Для меня важен результат: не отдельные прототипы, а работающие продукты, в которых интерфейс,
+серверная часть, AI и инфраструктура связаны в единую систему.
 
 ## `> cat stack.txt`
 
@@ -66,15 +66,15 @@
 ```text
 Сейчас:
 ├── развиваю Bakunity как экосистему продуктов и инфраструктуры
-├── строю OSVED — персональную интеллектуальную платформу
-├── развиваю Bak VPN как полноценный сетевой продукт
+├── развиваю Bakunity RDP — систему удалённого доступа к Windows
+├── развиваю Bak VPN — собственный VPN-сервис
 ├── внедряю AI-агентов в реальные процессы
-└── собираю инфраструктуру так, чтобы она управлялась как система
+└── упрощаю управление серверами и сервисами
 ```
 
 ## `> lab`
 
-- **[OSVED](https://github.com/TimaBak/osved)** — персональная интеллектуальная платформа
+- **[Bakunity RDP](https://github.com/Bakunity/RDP)** — удалённый доступ к Windows-ПК через Linux-сервер с управлением из Telegram
 - **[System Architect](https://github.com/TimaBak/System-Architect)** — эксперименты с архитектурой и автоматизацией
 - **[Ubuntu Hyper-V AI Server](https://github.com/TimaBak/Ubuntu-Hyperv-Hermes-Ai-Server)** — инфраструктурные эксперименты
 - **[Courses](https://github.com/TimaBak/Courses)** — пространство обучения и исследований
@@ -92,11 +92,11 @@
 ## `> principles`
 
 ```text
-01  сначала запустить, потом усложнять
+01  сначала рабочее решение, затем усложнение
 02  автоматизировать то, что повторяется
 03  инфраструктура — часть продукта
 04  AI должен давать измеримый результат
-05  реальное использование важнее красивой демки
+05  реальный продукт важнее эффектной демонстрации
 ```
 
 <p align="center">
@@ -106,9 +106,9 @@
   &nbsp;·&nbsp;
   <a href="https://bakvpn.me"><strong>Bak VPN</strong></a>
   &nbsp;·&nbsp;
-  <a href="https://osved.tima.biz"><strong>OSVED</strong></a>
+  <a href="https://rdp.bakunity.com"><strong>Bakunity RDP</strong></a>
 </p>
 
 <p align="center">
-  <img src="./assets/ru/footer.svg" width="100%" alt="Создавать запускать измерять улучшать" />
+  <img src="./assets/ru/footer.svg" width="100%" alt="От идеи до работающего продукта" />
 </p>
