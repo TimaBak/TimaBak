@@ -1,9 +1,9 @@
 <p align="right">
-  <strong>English</strong> · <a href="./README.md">Русский</a>
+  <strong>English</strong> · <a href="./README.ru.md">Русский</a>
 </p>
 
 <p align="center">
-  <img src="./assets/hero.svg" width="100%" alt="TimaBak profile" />
+  <img src="./assets/hero.svg" width="100%" alt="TimaBak — Digital Systems Builder" />
 </p>
 
 <p align="center">
@@ -11,44 +11,43 @@
   <a href="https://tima.biz"><img src="./assets/nav-tima.svg" width="18.5%" alt="tima.biz" /></a>
   <a href="https://bakvpn.me"><img src="./assets/nav-vpn.svg" width="18.5%" alt="Bak VPN" /></a>
   <a href="https://osved.tima.biz"><img src="./assets/nav-osved.svg" width="18.5%" alt="OSVED" /></a>
-  <a href="https://github.com/TimaBak?tab=repositories"><img src="./assets/nav-github.svg" width="18.5%" alt="GitHub" /></a>
+  <a href="https://github.com/TimaBak?tab=repositories"><img src="./assets/nav-github.svg" width="18.5%" alt="GitHub repositories" /></a>
 </p>
 
 <p align="center">
-  <strong>DIGITAL SYSTEMS BUILDER</strong><br/>
-  I build digital products end to end — from idea and interface to AI, backend, networks and infrastructure.
+  <strong>AI & SOFTWARE DEVELOPER · ENTREPRENEUR</strong><br/>
+  I build digital products end to end — from product design and AI to backend development, networking, and infrastructure.
 </p>
 
 <p align="center">
   <code>AI</code> × <code>PRODUCTS</code> × <code>INFRASTRUCTURE</code>
 </p>
 
-<img src="./assets/system-status.svg" width="100%" alt="Current system status" />
+<img src="./assets/system-status.svg" width="100%" alt="Current development and infrastructure status" />
 
 ## `> map ./bakunity`
 
-<img src="./assets/ecosystem.svg" width="100%" alt="Bakunity ecosystem" />
+<img src="./assets/ecosystem.svg" width="100%" alt="Bakunity product ecosystem" />
 
 ## `> ls ./products --visual`
 
 <p align="center">
-  <a href="https://github.com/TimaBak/osved"><img src="./assets/card-osved.svg" width="49%" alt="OSVED" /></a>
-  <a href="https://bakvpn.me"><img src="./assets/card-vpn.svg" width="49%" alt="Bak VPN" /></a>
+  <a href="https://github.com/TimaBak/osved"><img src="./assets/card-osved.svg" width="49%" alt="OSVED — personal intelligence platform" /></a>
+  <a href="https://bakvpn.me"><img src="./assets/card-vpn.svg" width="49%" alt="Bak VPN — networking product" /></a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/Bakunity"><img src="./assets/card-bakunity.svg" width="49%" alt="Bakunity" /></a>
-  <a href="https://github.com/TimaBak/System-Architect"><img src="./assets/card-infra.svg" width="49%" alt="Systems Lab" /></a>
+  <a href="https://github.com/Bakunity"><img src="./assets/card-bakunity.svg" width="49%" alt="Bakunity ecosystem" /></a>
+  <a href="https://github.com/TimaBak/System-Architect"><img src="./assets/card-infra.svg" width="49%" alt="Systems Lab — infrastructure and automation" /></a>
 </p>
 
 ## `> build.loop`
 
 ```text
-idea → build → ship → operate → scale
+idea → build → launch → operate → scale
 ```
 
-I like products as complete systems: interface, logic, AI, backend, infrastructure,
-networks and real operation should work together.
+I approach every product as a connected system. The user experience, application logic, AI, backend, networks, and infrastructure all need to work together — not just in a demo, but in production.
 
 ## `> cat stack.txt`
 
@@ -64,40 +63,39 @@ networks and real operation should work together.
 ## `> focus`
 
 ```text
-/tima
-├── build products, not presentations
-├── automate repetitive operations
-├── connect software with real infrastructure
-├── explore human + AI workflows
-├── design systems that can scale beyond one person
-└── learn by shipping
+Current focus:
+├── growing Bakunity into an ecosystem of products and infrastructure
+├── building OSVED, a personal intelligence platform
+├── developing Bak VPN as a complete networking product
+├── integrating AI agents into real-world workflows
+└── making infrastructure easier to manage as one connected system
 ```
 
 ## `> lab`
 
 - **[OSVED](https://github.com/TimaBak/osved)** — personal intelligence platform
-- **[System Architect](https://github.com/TimaBak/System-Architect)** — architecture and automation experiments
+- **[System Architect](https://github.com/TimaBak/System-Architect)** — experiments in system architecture and automation
 - **[Ubuntu Hyper-V AI Server](https://github.com/TimaBak/Ubuntu-Hyperv-Hermes-Ai-Server)** — infrastructure experiments
 - **[Courses](https://github.com/TimaBak/Courses)** — learning and research workspace
 
-## `> github.activity`
+## `> github.matrix`
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=TimaBak&bg_color=0d1117&color=2cff88&line=2cff88&point=ffffff&hide_border=true&area=true&area_color=2cff88" width="100%" alt="TimaBak activity graph" />
+  <img src="https://raw.githubusercontent.com/TimaBak/TimaBak/output/github-matrix-world-v8.svg?v=8" width="100%" alt="GitHub contribution matrix" />
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/TimaBak/TimaBak/output/github-contribution-grid-snake-dark.svg" width="100%" alt="Contribution snake" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=TimaBak&bg_color=0d1117&color=2cff88&line=2cff88&point=ffffff&hide_border=true&area=false&area_color=2cff88&custom_title=GitHub%20Activity" width="100%" alt="TimaBak GitHub activity graph" />
 </p>
 
 ## `> principles`
 
 ```text
-01  useful > impressive
-02  systems > repetitive work
-03  shipping > endless planning
-04  ownership > waiting
-05  learn → build → measure → repeat
+01  ship first, add complexity when needed
+02  automate recurring work
+03  treat infrastructure as part of the product
+04  use AI to deliver measurable results
+05  prioritize real-world use over polished demos
 ```
 
 <p align="center">
@@ -108,8 +106,10 @@ networks and real operation should work together.
   <a href="https://bakvpn.me"><strong>Bak VPN</strong></a>
   &nbsp;·&nbsp;
   <a href="https://osved.tima.biz"><strong>OSVED</strong></a>
+  &nbsp;·&nbsp;
+  <a href="mailto:i@tima.biz"><strong>i@tima.biz</strong></a>
 </p>
 
 <p align="center">
-  <img src="./assets/footer.svg" width="100%" alt="Build ship measure improve" />
+  <img src="./assets/footer.svg" width="100%" alt="Build, ship, measure, improve" />
 </p>
