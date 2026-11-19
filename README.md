@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <img src="./assets/hero.svg?v=3" width="100%" alt="TimaBak — Digital Systems Builder" />
+  <img src="./assets/hero.svg" width="100%" alt="TimaBak — Digital Systems Builder" />
 </p>
 
 <p align="center">
@@ -15,21 +15,21 @@
   <code>AI</code> × <code>PRODUCTS</code> × <code>INFRASTRUCTURE</code>
 </p>
 
-<img src="./assets/system-status.svg?v=3" width="100%" alt="Current development and infrastructure status" />
+<img src="./assets/system-status.svg" width="100%" alt="Current development and infrastructure status" />
 
 ## `> map ./bakunity`
 
-<img src="./assets/ecosystem.svg?v=3" width="100%" alt="Bakunity product ecosystem" />
+<img src="./assets/ecosystem.svg" width="100%" alt="Bakunity product ecosystem" />
 
 ## `> ls ./products --visual`
 
 <p align="center">
-  <a href="https://github.com/Bakunity/RDP"><img src="./assets/card-rdp.svg?v=3" width="49%" alt="Bakunity RDP — remote access gateway" /></a>
-  <a href="https://bakvpn.me"><img src="./assets/card-vpn.svg?v=3" width="49%" alt="Bak VPN — networking product" /></a>
+  <a href="https://github.com/Bakunity/RDP"><img src="./assets/card-rdp.svg" width="49%" alt="Bakunity RDP — remote access gateway" /></a>
+  <a href="https://bakvpn.me"><img src="./assets/card-vpn.svg" width="49%" alt="Bak VPN — networking product" /></a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/Bakunity"><img src="./assets/card-bakunity.svg?v=3" width="60%" alt="Bakunity ecosystem" /></a>
+  <a href="https://github.com/Bakunity"><img src="./assets/card-bakunity.svg" width="60%" alt="Bakunity ecosystem" /></a>
 </p>
 
 ## `> build.loop`
@@ -94,5 +94,5 @@ Current focus:
 </p>
 
 <p align="center">
-  <img src="./assets/footer.svg?v=3" width="100%" alt="From idea to product" />
+  <img src="./assets/footer.svg" width="100%" alt="From idea to product" />
 </p>
